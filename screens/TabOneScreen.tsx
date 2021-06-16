@@ -1,55 +1,57 @@
-import React from "react";
-import { useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React, { useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import { Card, Button } from "react-native-elements";
-import Deck from "../components/Deck";
 
-const DATA = [
-  {
-    id: 1,
-    title: "Card 1",
-    uri: "http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-09.jpg",
-  },
-  {
-    id: 2,
-    title: "Card 2",
-    uri: "http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-04.jpg",
-  },
-  {
-    id: 3,
-    title: "Card 3",
-    uri: "http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-09.jpg",
-  },
-  {
-    id: 4,
-    title: "Card 4",
-    uri: "http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-04.jpg",
-  },
-  {
-    id: 5,
-    title: "Card 5",
-    uri: "http://imgs.abduzeedo.com/files/paul0v2/unsplash/unsplash-09.jpg",
-  },
-];
+import { getPokemon, getPokemonDetail } from "../api/pokemon.api";
+import Deck from "../components/Deck";
 
 type ItemType = {
   id: number;
-  title: string;
+  name: string;
   uri: string;
 };
 
+const LIST_SIZE = 10;
+
 export default function TabOneScreen() {
-  const [data, setData] = useState<ItemType[]>(DATA);
+  const [data, setData] = useState<ItemType[]>([]);
+  const [offset, setOffset] = useState<number>(0);
+
+  useEffect(() => {
+    getPokemon(10, offset).then(async (response) => {
+      console.log(response);
+      if (response.ok) {
+        const promises = response.data.results.map(async (item: ItemType) => {
+          const responseDetails = await getPokemonDetail(item.name);
+          console.log(responseDetails);
+          if (responseDetails.ok) {
+            const uri =
+              responseDetails.data.sprites.other["official-artwork"]
+                .front_default;
+            return { ...item, uri };
+          } else {
+            return { ...item, uri: "" };
+          }
+        });
+
+        const pokemonData = (await Promise.all(promises)) as ItemType[];
+
+        setData(pokemonData);
+      }
+    });
+  }, [offset]);
 
   const fetchMorePressed = () => {
-    setData([...DATA]);
+    setOffset(offset + LIST_SIZE);
   };
 
   const renderCard = (item: ItemType) => {
+    const { name, uri } = item;
+
     return (
       <Card>
-        <Card.Image source={{ uri: item.uri }} />
-        <Card.Title>{item.title}</Card.Title>
+        <Card.Image style={{ resizeMode: "contain" }} source={{ uri }} />
+        <Card.Title>{name}</Card.Title>
         <Card.Divider />
 
         <Button title="View Now!" />
@@ -70,11 +72,14 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
-      <Deck
-        data={data}
-        renderCard={renderCard}
-        renderNoMoreCards={renderNoMoreCards}
-      />
+      {data != null && (
+        <Deck
+          keyExtractor={(item) => item.name}
+          data={data}
+          renderCard={renderCard}
+          renderNoMoreCards={renderNoMoreCards}
+        />
+      )}
     </View>
   );
 }

@@ -11,12 +11,14 @@ import {
   UIManager,
   LayoutAnimation,
 } from "react-native";
+import { ListItem } from "react-native-elements/dist/list/ListItem";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 const SWIPE_THRESHOLD = 0.25 * SCREEN_WIDTH;
 const SWIPE_OUT_DURATION = 250;
 
 interface Props<T> {
+  keyExtractor?: (item: T) => string;
   data: T[];
   renderNoMoreCards: () => React.ReactNode;
   renderCard: (item: T) => React.ReactNode;
@@ -32,6 +34,7 @@ if (
 }
 
 const Deck = ({
+  keyExtractor = (item) => item.id,
   data,
   renderNoMoreCards,
   renderCard,
@@ -128,7 +131,7 @@ const Deck = ({
         if (elementIndex === currentIndex) {
           return (
             <Animated.View
-              key={item.id}
+              key={keyExtractor(item)}
               style={[getCardStyle(), styles.cardStyle, { zIndex: 10 }]}
               {...panResponder.panHandlers}
             >
@@ -139,7 +142,7 @@ const Deck = ({
 
         return (
           <Animated.View
-            key={item.id}
+            key={keyExtractor(item)}
             style={[
               styles.cardStyle,
               { top: 10 * (elementIndex - currentIndex), zIndex: 5 },
