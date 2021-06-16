@@ -10,7 +10,7 @@ const Loading = ({ loading }: Props) => {
   else
     return (
       <View style={styles.container}>
-        <ActivityIndicator size="large" color={"black"} />
+        <ActivityIndicator size="large" color={"dodgerblue"} />
       </View>
     );
 };
