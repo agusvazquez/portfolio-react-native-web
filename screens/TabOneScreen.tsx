@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, ActivityIndicator } from "react-native";
 import { Card, Button } from "react-native-elements";
 
 import { getPokemon, getPokemonDetail } from "../api/pokemon.api";
 import Deck from "../components/Deck";
+import Loading from "../components/Loading";
 
 type ItemType = {
   id: number;
@@ -15,11 +16,12 @@ const LIST_SIZE = 10;
 
 export default function TabOneScreen() {
   const [data, setData] = useState<ItemType[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
   const [offset, setOffset] = useState<number>(0);
 
   useEffect(() => {
-    getPokemon(10, offset).then(async (response) => {
-      console.log(response);
+    setLoading(true);
+    getPokemon(LIST_SIZE, offset).then(async (response) => {
       if (response.ok) {
         const promises = response.data.results.map(async (item: ItemType) => {
           const responseDetails = await getPokemonDetail(item.name);
@@ -37,6 +39,7 @@ export default function TabOneScreen() {
         const pokemonData = (await Promise.all(promises)) as ItemType[];
 
         setData(pokemonData);
+        setLoading(false);
       }
     });
   }, [offset]);
@@ -72,7 +75,7 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
-      {data != null && (
+      {data != null && loading == false && (
         <Deck
           keyExtractor={(item) => item.name}
           data={data}
@@ -80,6 +83,8 @@ export default function TabOneScreen() {
           renderNoMoreCards={renderNoMoreCards}
         />
       )}
+
+      <Loading loading={loading} />
     </View>
   );
 }
