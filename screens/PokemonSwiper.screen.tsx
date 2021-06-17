@@ -1,6 +1,9 @@
+import { ApiResponse } from "apisauce";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View, ActivityIndicator } from "react-native";
+import { StyleSheet, View, useColorScheme } from "react-native";
 import { Card, Button } from "react-native-elements";
+
+import { ColorTheme, useTheme } from "../theme/Theme.interface";
 
 import { getPokemon, getPokemonDetail } from "../api/pokemon.api";
 import Deck from "../components/Deck";
@@ -14,18 +17,22 @@ type ItemType = {
 
 const LIST_SIZE = 10;
 
-export default function TabOneScreen() {
+export default function PokemonSwiper() {
   const [data, setData] = useState<ItemType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [offset, setOffset] = useState<number>(0);
 
+  const theme = useTheme();
+  const styles = React.useMemo(() => createStyles(theme), [theme]);
+
   useEffect(() => {
     setLoading(true);
-    getPokemon(LIST_SIZE, offset).then(async (response) => {
+    getPokemon(LIST_SIZE, offset).then(async (response: ApiResponse<any>) => {
       if (response.ok) {
         const promises = response.data.results.map(async (item: ItemType) => {
-          const responseDetails = await getPokemonDetail(item.name);
-          console.log(responseDetails);
+          const responseDetails = (await getPokemonDetail(
+            item.name
+          )) as ApiResponse<any>;
           if (responseDetails.ok) {
             const uri =
               responseDetails.data.sprites.other["official-artwork"]
@@ -54,7 +61,7 @@ export default function TabOneScreen() {
     return (
       <Card>
         <Card.Image style={{ resizeMode: "contain" }} source={{ uri }} />
-        <Card.Title>{name}</Card.Title>
+        <Card.Title>{name.charAt(0).toUpperCase() + name.slice(1)}</Card.Title>
         <Card.Divider />
 
         <Button title="View Now!" />
@@ -89,8 +96,12 @@ export default function TabOneScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+const createStyles = (theme: ColorTheme) => {
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: theme.background,
+    },
+  });
+  return styles;
+};

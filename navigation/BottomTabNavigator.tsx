@@ -7,32 +7,41 @@ import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
+import { StyleSheet } from "react-native";
 
-import TabOneScreen from "../screens/TabOneScreen";
+import PokemonSwiper from "../screens/PokemonSwiper.screen";
 import TabTwoScreen from "../screens/TabTwoScreen";
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
+import { ColorTheme, useTheme } from "../theme/Theme.interface";
+import {
+  BottomTabParamList,
+  PokemonParamList,
+  TabTwoParamList,
+} from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
+  const theme = useTheme();
+  const styles = React.useMemo(() => createStyles(theme), [theme]);
+
   return (
-    <BottomTab.Navigator initialRouteName="TabOne">
+    <BottomTab.Navigator
+      initialRouteName="Pokemon"
+      activeBackgroundColor="red"
+      tabBarOptions={styles.barOptions}
+    >
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneNavigator}
+        name="Pokemon"
+        component={PokemonNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       <BottomTab.Screen
         name="TabTwo"
         component={TabTwoNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -50,25 +59,31 @@ function TabBarIcon(props: {
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>();
+const PokemonStack = createStackNavigator<PokemonParamList>();
 
-function TabOneNavigator() {
+function PokemonNavigator() {
+  const theme = useTheme();
+  const styles = React.useMemo(() => createStyles(theme), [theme]);
+
   return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: "Tab One Title" }}
+    <PokemonStack.Navigator screenOptions={styles.navOptions}>
+      <PokemonStack.Screen
+        name="PokemonSwiper"
+        component={PokemonSwiper}
+        options={{ headerTitle: "Pokemon" }}
       />
-    </TabOneStack.Navigator>
+    </PokemonStack.Navigator>
   );
 }
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
 function TabTwoNavigator() {
+  const theme = useTheme();
+  const styles = React.useMemo(() => createStyles(theme), [theme]);
+
   return (
-    <TabTwoStack.Navigator>
+    <TabTwoStack.Navigator screenOptions={styles.navOptions}>
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
@@ -77,3 +92,22 @@ function TabTwoNavigator() {
     </TabTwoStack.Navigator>
   );
 }
+
+const createStyles = (theme: ColorTheme) => {
+  const styles = {
+    barOptions: {
+      activeTintColor: theme.onSurface,
+      inactiveTintColor: theme.surface,
+      style: {
+        backgroundColor: theme.navigationBackground,
+      },
+    },
+    navOptions: {
+      headerStyle: {
+        backgroundColor: theme.navigationBackground,
+      },
+      headerTintColor: theme.onPrimary,
+    },
+  };
+  return styles;
+};
