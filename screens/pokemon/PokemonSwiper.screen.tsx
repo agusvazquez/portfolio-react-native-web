@@ -1,13 +1,13 @@
 import { ApiResponse } from "apisauce";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View, useColorScheme } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Card, Button } from "react-native-elements";
 
-import { ColorTheme, useTheme } from "../theme/Theme.interface";
+import { ColorTheme, useTheme } from "../../theme/Theme.interface";
 
-import { getPokemon, getPokemonDetail } from "../api/pokemon.api";
-import Deck from "../components/Deck";
-import Loading from "../components/Loading";
+import { getPokemon, getPokemonDetail } from "../../api/pokemon.api";
+import Deck from "../../components/Deck";
+import Loading from "../../components/Loading";
 
 type ItemType = {
   id: number;
@@ -82,6 +82,7 @@ export default function PokemonSwiper() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.headerText}>Swipe the card</Text>
       {data != null && loading == false && (
         <Deck
           keyExtractor={(item) => item.name}
@@ -101,6 +102,13 @@ const createStyles = (theme: ColorTheme) => {
     container: {
       flex: 1,
       backgroundColor: theme.background,
+    },
+    headerText: {
+      color: theme.onPrimary,
+      fontSize: 16,
+      fontWeight: "bold",
+      marginVertical: 10,
+      alignSelf: "center",
     },
   });
   return styles;
