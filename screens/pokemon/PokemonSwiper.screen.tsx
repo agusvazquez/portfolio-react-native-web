@@ -2,12 +2,14 @@ import { ApiResponse } from "apisauce";
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { Card, Button } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
 
 import { ColorTheme, useTheme } from "../../theme/Theme.interface";
 
 import { getPokemon, getPokemonDetail } from "../../api/pokemon.api";
-import Deck from "../../components/Deck";
-import Loading from "../../components/Loading";
+import Deck from "../../components/Deck.component";
+import Loading from "../../components/Loading.component";
+import { Background } from "../../components/ui.component";
 
 type ItemType = {
   id: number;
@@ -21,6 +23,8 @@ export default function PokemonSwiper() {
   const [data, setData] = useState<ItemType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [offset, setOffset] = useState<number>(0);
+
+  const navigation = useNavigation();
 
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
@@ -64,7 +68,10 @@ export default function PokemonSwiper() {
         <Card.Title>{name.charAt(0).toUpperCase() + name.slice(1)}</Card.Title>
         <Card.Divider />
 
-        <Button title="View Now!" />
+        <Button
+          title="View Now!"
+          onPress={() => navigation.navigate("PokemonDetails", item)}
+        />
       </Card>
     );
   };
@@ -81,7 +88,7 @@ export default function PokemonSwiper() {
   };
 
   return (
-    <View style={styles.container}>
+    <Background>
       <Text style={styles.headerText}>Swipe the card</Text>
       {data != null && loading == false && (
         <Deck
@@ -93,16 +100,12 @@ export default function PokemonSwiper() {
       )}
 
       <Loading loading={loading} />
-    </View>
+    </Background>
   );
 }
 
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: theme.background,
-    },
     headerText: {
       color: theme.onPrimary,
       fontSize: 16,

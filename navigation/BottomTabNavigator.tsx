@@ -6,6 +6,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import PokemonSwiper from "../screens/pokemon/PokemonSwiper.screen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import { ColorTheme, useTheme } from "../theme/Theme.interface";
+import { getPokemonDetail } from "../api/pokemon.api";
+import PokemonDetails from "../screens/pokemon/PokemonDetails.screen";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -54,6 +56,12 @@ function PokemonNavigator() {
       <PokemonStack.Screen
         name="PokemonSwiper"
         component={PokemonSwiper}
+        options={{ headerTitle: "Pokemon" }}
+      />
+
+      <PokemonStack.Screen
+        name="PokemonDetails"
+        component={PokemonDetails}
         options={{ headerTitle: "Pokemon" }}
       />
     </PokemonStack.Navigator>
