@@ -10,17 +10,12 @@ import { getPokemon, getPokemonDetail } from "../../api/pokemon.api";
 import Deck from "../../components/Deck.component";
 import Loading from "../../components/Loading.component";
 import { Background } from "../../components/ui.component";
-
-type ItemType = {
-  id: number;
-  name: string;
-  uri: string;
-};
+import { PokemonListType } from "../../types";
 
 const LIST_SIZE = 10;
 
 export default function PokemonSwiper() {
-  const [data, setData] = useState<ItemType[]>([]);
+  const [data, setData] = useState<PokemonListType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [offset, setOffset] = useState<number>(0);
 
@@ -33,21 +28,23 @@ export default function PokemonSwiper() {
     setLoading(true);
     getPokemon(LIST_SIZE, offset).then(async (response: ApiResponse<any>) => {
       if (response.ok) {
-        const promises = response.data.results.map(async (item: ItemType) => {
-          const responseDetails = (await getPokemonDetail(
-            item.name
-          )) as ApiResponse<any>;
-          if (responseDetails.ok) {
-            const uri =
-              responseDetails.data.sprites.other["official-artwork"]
-                .front_default;
-            return { ...item, uri };
-          } else {
-            return { ...item, uri: "" };
+        const promises = response.data.results.map(
+          async (item: PokemonListType) => {
+            const responseDetails = (await getPokemonDetail(
+              item.name
+            )) as ApiResponse<any>;
+            if (responseDetails.ok) {
+              const uri =
+                responseDetails.data.sprites.other["official-artwork"]
+                  .front_default;
+              return { ...item, uri };
+            } else {
+              return { ...item, uri: "" };
+            }
           }
-        });
+        );
 
-        const pokemonData = (await Promise.all(promises)) as ItemType[];
+        const pokemonData = (await Promise.all(promises)) as PokemonListType[];
 
         setData(pokemonData);
         setLoading(false);
@@ -59,7 +56,7 @@ export default function PokemonSwiper() {
     setOffset(offset + LIST_SIZE);
   };
 
-  const renderCard = (item: ItemType) => {
+  const renderCard = (item: PokemonListType) => {
     const { name, uri } = item;
 
     return (

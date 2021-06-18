@@ -17,9 +17,9 @@ export default {
               PokemonSwiper: "pokemon_swiper",
             },
           },
-          TabTwo: {
+          Portfolio: {
             screens: {
-              TabTwoScreen: "two",
+              PortfolioScreen: "portfolio",
             },
           },
         },

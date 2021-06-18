@@ -4,9 +4,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import PokemonSwiper from "../screens/pokemon/PokemonSwiper.screen";
-import TabTwoScreen from "../screens/TabTwoScreen";
+import PortfolioScreen from "../screens/portfolio/PortfolioScreen.screen";
 import { ColorTheme, useTheme } from "../theme/Theme.interface";
-import { getPokemonDetail } from "../api/pokemon.api";
 import PokemonDetails from "../screens/pokemon/PokemonDetails.screen";
 
 const BottomTab = createBottomTabNavigator();
@@ -28,8 +27,8 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
+        name="Portfolio"
+        component={PortfolioNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
@@ -58,17 +57,11 @@ function PokemonNavigator() {
         component={PokemonSwiper}
         options={{ headerTitle: "Pokemon" }}
       />
-
-      <PokemonStack.Screen
-        name="PokemonDetails"
-        component={PokemonDetails}
-        options={{ headerTitle: "Pokemon" }}
-      />
     </PokemonStack.Navigator>
   );
 }
 
-const TabTwoStack = createStackNavigator();
+const PortfolioStack = createStackNavigator();
 
 // TODO
 // Portfolio
@@ -76,18 +69,18 @@ const TabTwoStack = createStackNavigator();
 // Skills - Education
 // About Me - Email - Social Network urls - Link to CV & website
 
-function TabTwoNavigator() {
+function PortfolioNavigator() {
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
 
   return (
-    <TabTwoStack.Navigator screenOptions={styles.navOptions}>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: "Tab Two Title" }}
+    <PortfolioStack.Navigator screenOptions={styles.navOptions}>
+      <PortfolioStack.Screen
+        name="PortfolioScreen"
+        component={PortfolioScreen}
+        options={{ headerTitle: "Portfolio" }}
       />
-    </TabTwoStack.Navigator>
+    </PortfolioStack.Navigator>
   );
 }
 

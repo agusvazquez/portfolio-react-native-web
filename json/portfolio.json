@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Fairmarket Home",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/fairmarket.jpg",
+    "url_web": "https://fairmarkethome.com/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.fairmarkethome",
+    "url_ios": "https://apps.apple.com/us/app/fairmarket-home/id1499657250",
+    "tintColor": "lightgray",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "Present"
+  },
+  {
+    "name": "Scholly Search",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/schollysearch.jpg",
+    "url_web": "https://myscholly.com/search/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.scholly.scholarshipsearch",
+    "url_ios": "https://apps.apple.com/us/app/scholly-college-scholarships/id1048625540",
+    "tintColor": "black",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2020",
+    "currentlyWorking": true
+  },
+  {
+    "name": "Scholly Math",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/schollymath.jpg",
+    "url_web": "https://myscholly.com/math/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.scholly.math",
+    "url_ios": "https://apps.apple.com/us/app/scholly-math/id1450673194",
+    "tintColor": "black",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2020"
+  },
+  {
+    "name": "We Cover",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/wecover.jpg",
+    "url_web": "https://wecover.co/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.paisanoscreando.wecover",
+    "url_ios": "https://apps.apple.com/us/app/wecover-co/id1459873745",
+    "tintColor": "lightgray",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2018"
+  },
+  {
+    "name": "Toyboy Warehouse",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/toyboywarehouse.jpg",
+    "url_web": "https://toyboywarehouse.com/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.toyboywarehouse",
+    "url_ios": "https://apps.apple.com/us/app/toyboy-warehouse/id1465752398",
+    "tintColor": "white",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2019"
+  },
+  {
+    "name": "Medvice",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/medvice.png",
+    "url_web": "https://medvice.io/",
+    "url_android": "https://play.google.com/store/apps/details?id=io.medvice",
+    "url_ios": null,
+    "tintColor": null,
+    "platforms": ["react_native", "android"],
+    "lastWork": "2018"
+  },
+  {
+    "name": "Energy Safe",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/energysafe.png",
+    "url_web": null,
+    "url_android": "https://play.google.com/store/apps/details?id=com.nordica.energysafe",
+    "url_ios": "https://apps.apple.com/ar/app/energysafe/id1343313038",
+    "tintColor": "white",
+    "platforms": ["ios", "android"],
+    "lastWork": "2018"
+  },
+  {
+    "name": "Cambio Posadas",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/cambioposadas.png",
+    "url_web": "https://cambioposadas.com.ar/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.paisanoscreando.cambioposadas",
+    "url_ios": "https://apps.apple.com/ar/app/cambio-posadas/id1345520805",
+    "tintColor": "white",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2018"
+  },
+  {
+    "name": "Premedic",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/premedic.png",
+    "url_web": null,
+    "url_android": "https://play.google.com/store/apps/details?id=com.paisanoscreando.premedic",
+    "url_ios": "https://apps.apple.com/ar/app/premedic-m%C3%B3vil/id1091291561",
+    "tintColor": "white",
+    "platforms": ["ios", "android"],
+    "lastWork": "2017"
+  },
+  {
+    "name": "Vea Mobile",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/vea.png",
+    "url_web": null,
+    "url_android": "https://play.google.com/store/apps/details?id=com.paisanoscreando.vea",
+    "url_ios": null,
+    "tintColor": "white",
+    "platforms": ["android"],
+    "lastWork": "2017"
+  },
+  {
+    "name": "Domic",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/domic.png",
+    "url_web": null,
+    "url_android": null,
+    "url_ios": "https://apps.apple.com/ar/app/domic/id1430068169",
+    "tintColor": "white",
+    "platforms": ["ios"],
+    "lastWork": "2017"
+  },
+  {
+    "name": "Soy Vecino",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/soyvecino.png",
+    "url_web": "https://toyboywarehouse.com/",
+    "url_android": null,
+    "url_ios": "https://apps.apple.com/ar/app/soy-vecino/id1121411176",
+    "tintColor": "white",
+    "platforms": ["ios"],
+    "lastWork": "2016"
+  },
+  {
+    "name": "Movilidad Segura",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/movilidadsegura.png",
+    "url_web": null,
+    "url_android": null,
+    "url_ios": "https://apps.apple.com/ar/app/movilidad-segura/id1186905483",
+    "tintColor": "white",
+    "platforms": ["ios"],
+    "lastWork": "2016"
+  },
+  {
+    "name": "Saborea Mobile",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/saborea.png",
+    "url_web": null,
+    "url_android": null,
+    "url_ios": "https://apps.apple.com/ar/app/saborea-mobile/id993234995",
+    "tintColor": "white",
+    "platforms": ["ios"],
+    "lastWork": "2016"
+  },
+  {
+    "name": "Trending",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/trending.png",
+    "url_web": null,
+    "url_android": null,
+    "url_ios": "https://apps.apple.com/ar/app/trending/id1024646277",
+    "tintColor": "white",
+    "platforms": ["ios"],
+    "lastWork": "2015"
+  },
+  {
+    "name": "Me voy en Bici",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/mevoyenbici.png",
+    "url_web": null,
+    "url_android": null,
+    "url_ios": "https://apps.apple.com/ar/app/me-voy-en-bici/id657157038",
+    "tintColor": "white",
+    "platforms": ["ios"],
+    "lastWork": "2013"
+  }
+]
