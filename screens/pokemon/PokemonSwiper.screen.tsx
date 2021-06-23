@@ -1,6 +1,6 @@
 import { ApiResponse } from "apisauce";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Linking } from "react-native";
 import { Card, Button } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 
@@ -13,13 +13,12 @@ import { Background } from "../../components/ui.component";
 import { PokemonListType } from "../../types";
 
 const LIST_SIZE = 10;
+const POKEMON_WIKI_URL = "https://pokemon.fandom.com/es/wiki/";
 
 export default function PokemonSwiper() {
   const [data, setData] = useState<PokemonListType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [offset, setOffset] = useState<number>(0);
-
-  const navigation = useNavigation();
 
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
@@ -59,15 +58,17 @@ export default function PokemonSwiper() {
   const renderCard = (item: PokemonListType) => {
     const { name, uri } = item;
 
+    const upperCasedName = name.charAt(0).toUpperCase() + name.slice(1);
+
     return (
       <Card>
         <Card.Image style={{ resizeMode: "contain" }} source={{ uri }} />
-        <Card.Title>{name.charAt(0).toUpperCase() + name.slice(1)}</Card.Title>
+        <Card.Title h4>{upperCasedName}</Card.Title>
         <Card.Divider />
 
         <Button
-          title="View Now!"
-          onPress={() => navigation.navigate("PokemonDetails", item)}
+          title="View More"
+          onPress={() => Linking.openURL(POKEMON_WIKI_URL + upperCasedName)}
         />
       </Card>
     );
@@ -95,7 +96,6 @@ export default function PokemonSwiper() {
           renderNoMoreCards={renderNoMoreCards}
         />
       )}
-
       <Loading loading={loading} />
     </Background>
   );

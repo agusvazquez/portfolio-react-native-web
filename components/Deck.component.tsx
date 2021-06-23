@@ -11,7 +11,6 @@ import {
   UIManager,
   LayoutAnimation,
 } from "react-native";
-import { ListItem } from "react-native-elements/dist/list/ListItem";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 const SWIPE_THRESHOLD = 0.25 * SCREEN_WIDTH;

@@ -6,7 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import PokemonSwiper from "../screens/pokemon/PokemonSwiper.screen";
 import PortfolioScreen from "../screens/portfolio/PortfolioScreen.screen";
 import { ColorTheme, useTheme } from "../theme/Theme.interface";
-import PokemonDetails from "../screens/pokemon/PokemonDetails.screen";
+import WorkExperienceScreen from "../screens/work_experience/WorkExperience.screen";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -33,6 +33,13 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
+      <BottomTab.Screen
+        name="Work Experience"
+        component={WorkExperienceNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
     </BottomTab.Navigator>
   );
 }
@@ -44,8 +51,13 @@ function TabBarIcon(props: {
   return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
 }
 
-const PokemonStack = createStackNavigator();
+// TODO
+// Portfolio: Press animation with Pan responder. Possibility to manually change order for apps.
+// Work Experience content
+// Skills - Education
+// About Me - Email - Social Network urls - Link to CV & website
 
+const PokemonStack = createStackNavigator();
 function PokemonNavigator() {
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
@@ -62,13 +74,6 @@ function PokemonNavigator() {
 }
 
 const PortfolioStack = createStackNavigator();
-
-// TODO
-// Portfolio
-// Work Experience
-// Skills - Education
-// About Me - Email - Social Network urls - Link to CV & website
-
 function PortfolioNavigator() {
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
@@ -79,6 +84,22 @@ function PortfolioNavigator() {
         name="PortfolioScreen"
         component={PortfolioScreen}
         options={{ headerTitle: "Portfolio" }}
+      />
+    </PortfolioStack.Navigator>
+  );
+}
+
+const WorkExperienceStack = createStackNavigator();
+function WorkExperienceNavigator() {
+  const theme = useTheme();
+  const styles = React.useMemo(() => createStyles(theme), [theme]);
+
+  return (
+    <PortfolioStack.Navigator screenOptions={styles.navOptions}>
+      <PortfolioStack.Screen
+        name="WorkExperienceScreen"
+        component={WorkExperienceScreen}
+        options={{ headerTitle: "Work Experience" }}
       />
     </PortfolioStack.Navigator>
   );

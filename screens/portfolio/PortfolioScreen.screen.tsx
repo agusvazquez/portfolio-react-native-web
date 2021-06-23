@@ -36,12 +36,12 @@ export default function PortfolioScreen() {
     <Background>
       <FlatList
         data={portfolioData as PortfolioItemType[]}
+        keyExtractor={(item) => item.name}
         contentContainerStyle={styles.container}
         numColumns={COLUMN_COUNT}
         ListFooterComponent={() => <View style={styles.footer} />}
         renderItem={({ item }) => (
           <PortfolioItem
-            key={item.name}
             item={item}
             onPress={onItemPressed}
             containerStyle={{ margin: MARGIN, flex: 1 / COLUMN_COUNT }}
