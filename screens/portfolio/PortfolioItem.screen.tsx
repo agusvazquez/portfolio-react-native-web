@@ -26,19 +26,19 @@ const PortfolioItem = ({ item, containerStyle, onPress }: Props) => {
 
   return (
     <TouchableOpacity
-      style={{ ...styles.itemContainer, ...containerStyle }}
+      style={[styles.itemContainer, containerStyle]}
       onPress={() => onPress(item)}
     >
       <Image style={styles.image} source={{ uri: image }} />
 
-      <Text style={{ ...styles.text, color: tintColor }}>{lastWork}</Text>
+      <Text style={[styles.text, { color: tintColor }]}>{lastWork}</Text>
 
       <View style={styles.platformContainer}>
         {platforms.map((platform) => {
           return (
             <Image
               key={platform}
-              style={{ ...styles.platformImage, tintColor }}
+              style={[styles.platformImage, { tintColor: tintColor }]}
               source={getTechIcon(platform)}
             />
           );

@@ -15,8 +15,8 @@ const SkillBar = ({ name, value }: Props) => {
     <View style={styles.container}>
       <Text style={styles.title}>{name}</Text>
       <View style={styles.containerBar}>
-        <View style={{ ...styles.coloredBar, flex: value }} />
-        <View style={{ ...styles.backgroundBar, flex: 1 - value }} />
+        <View style={[styles.coloredBar, { flex: value }]} />
+        <View style={[styles.backgroundBar, { flex: 1 - value }]} />
       </View>
     </View>
   );
