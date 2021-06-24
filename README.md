@@ -2,7 +2,7 @@
 
 This is a sample app I developed to play around with Animations and build some sort of personal app to show off on interviews and recruiters.
 
-It supports web with react-native-web and the steps to launch it are the following:
+It supports mobile web with react-native-web and the steps to launch it are the following:
 
 - run `yarn`
 - For web, run `yarn web`
