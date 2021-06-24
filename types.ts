@@ -1,3 +1,5 @@
+import { InteractionManagerStatic } from "react-native";
+
 export type PokemonListType = {
   id: number;
   name: string;
@@ -15,4 +17,9 @@ export type PortfolioItemType = {
   platforms: string[];
   lastWork?: string;
   currentlyWorking: boolean;
+};
+
+export type SkillItemType = {
+  name: string;
+  level: number;
 };

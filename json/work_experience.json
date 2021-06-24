@@ -1,25 +1,55 @@
 [
   {
-    "time": "Now",
-    "title": "Event 1",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "time": "2021",
+    "title": "Fairmarket Home (via Toptal)",
+    "description": "- Developed a home management app in React Native using GraphQL with Apollo client.\n- Implemented Android instant apps and iOS 14 app clips.\n- Created end to end tests using Appium and AWS Device Farm.\n- Added native libraries such as FacebookSDK, Google Sign In, Firebase Analytics, AppsFlyer, OneSignal, CodePush."
   },
   {
     "time": "2019",
-    "title": "Event 2",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "title": "Scholly (via Toptal)",
+    "description": "- Worked on Scholly Math and Scholly Search applications (React Native & Expo)\n- Worked with in-app purchases and push notifications in both Android and iOS.\n- Performed A/B Tests and JEST snapshot testing."
   },
   {
     "time": "2019",
-    "title": "Event 3",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "title": "Toyboy Warehouse (via Toptal)",
+    "description": "- Developed a Tinder style application using Animated API in React Native.\n- Worked with In app purchases and Push Notifications."
+  },
+  {
+    "time": "2019",
+    "title": "Mobeezio (via Toptal)",
+    "description": "- Implemented a bridge from Unity to React Native by using native modules and callbacks. (Unity - React Native)\n- Created a CircleCI YML file to generate the library files automatically. (Unity - React Native)\n- Developed modules such as login, register, and friend list. (React Native)."
+  },
+  {
+    "time": "2018",
+    "title": "Medvice (Freelance)",
+    "description": "- Built a prototype for a startup based in the Netherlands on React Native, and by using AI and OpenGL it can detect health emergencies.\n- Integrated Google Sign In, Firebase Analytics, Fingerprint and FaceID Authentication."
+  },
+  {
+    "time": "2018",
+    "title": "Genium (Freelance)",
+    "description": "- Worked as a Project Manager for a specific project that consisted of making a web game compatible with Facebook Playable Ads."
   },
   {
     "time": "2012",
-    "title": "Event 4",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "title": "Paisanos Creando",
+    "description": "- Founded my own software development company.\n- Implemented native products in Android Java and iOS Objective C from simple MVPs to virtual reality, video processing tools, livestream, etc.\n- In order to maintain a good mobile UX I decided to keep it simple. 6 years of hard work cannot be compacted in few lines. Check my resume for more at www.agustinvazquez.com"
   },
   {
-    "time": "2011"
+    "time": "2012",
+    "title": "Fyrastudio",
+    "description": "- Developed a mobile game using canvas for Android. The game used the accelerometer to detect phone shakes. The canvas was for the progress of the points because it was circular and at that time there were no libraries to do that (2012).\n- earned about phone measuring tools of the phone like GPS, Compass, and Accelerometers used to build a game.\n- Used Camera API to scan QR code bars"
+  },
+  {
+    "time": "2012",
+    "title": "Freelance",
+    "description": "- Created my first and own mobile product that showed the roadblocks of my city, similar to Waze—ultimately reaching over 50,000 users. Unfortunately, when Waze arrived in Buenos Aires my project lost almost all of their users.\n- Improved my server-side code by using cache techniques to handle over 50,000 users.\n- Created an API in PHP for the mobile application that showed the road blocks and received roadblocks requests from the users."
+  },
+  {
+    "time": "2011",
+    "title": "Conexia",
+    "description": "- Learned the basics of Java Backend.\n- Did simple maintenance tasks and scripts in bash."
+  },
+  {
+    "time": "2010"
   }
 ]

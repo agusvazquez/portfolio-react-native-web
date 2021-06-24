@@ -34,11 +34,12 @@ const PortfolioItem = ({ item, containerStyle, onPress }: Props) => {
       <Text style={{ ...styles.text, color: tintColor }}>{lastWork}</Text>
 
       <View style={styles.platformContainer}>
-        {platforms.map((platforms) => {
+        {platforms.map((platform) => {
           return (
             <Image
+              key={platform}
               style={{ ...styles.platformImage, tintColor }}
-              source={getTechIcon(platforms)}
+              source={getTechIcon(platform)}
             />
           );
         })}

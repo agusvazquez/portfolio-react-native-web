@@ -7,6 +7,8 @@ import PokemonSwiper from "../screens/pokemon/PokemonSwiper.screen";
 import PortfolioScreen from "../screens/portfolio/PortfolioScreen.screen";
 import { ColorTheme, useTheme } from "../theme/Theme.interface";
 import WorkExperienceScreen from "../screens/work_experience/WorkExperience.screen";
+import AboutMeScreen from "../screens/about_me/AboutMe.screen";
+import SkillsScreen from "../screens/skills/Skills.screen";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -20,7 +22,7 @@ export default function BottomTabNavigator() {
       tabBarOptions={styles.barOptions}
     >
       <BottomTab.Screen
-        name="Pokemon"
+        name="Animations"
         component={PokemonNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
@@ -40,6 +42,20 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
+      <BottomTab.Screen
+        name="Skills"
+        component={SkillsStackNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="About Me"
+        component={AboutMeStackNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
     </BottomTab.Navigator>
   );
 }
@@ -48,7 +64,7 @@ function TabBarIcon(props: {
   name: React.ComponentProps<typeof Ionicons>["name"];
   color: string;
 }) {
-  return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
+  return <Ionicons size={30} {...props} />;
 }
 
 // TODO
@@ -67,7 +83,7 @@ function PokemonNavigator() {
       <PokemonStack.Screen
         name="PokemonSwiper"
         component={PokemonSwiper}
-        options={{ headerTitle: "Pokemon" }}
+        options={{ headerTitle: "Animations" }}
       />
     </PokemonStack.Navigator>
   );
@@ -95,13 +111,45 @@ function WorkExperienceNavigator() {
   const styles = React.useMemo(() => createStyles(theme), [theme]);
 
   return (
-    <PortfolioStack.Navigator screenOptions={styles.navOptions}>
-      <PortfolioStack.Screen
+    <WorkExperienceStack.Navigator screenOptions={styles.navOptions}>
+      <WorkExperienceStack.Screen
         name="WorkExperienceScreen"
         component={WorkExperienceScreen}
         options={{ headerTitle: "Work Experience" }}
       />
-    </PortfolioStack.Navigator>
+    </WorkExperienceStack.Navigator>
+  );
+}
+
+const SkillsStack = createStackNavigator();
+function SkillsStackNavigator() {
+  const theme = useTheme();
+  const styles = React.useMemo(() => createStyles(theme), [theme]);
+
+  return (
+    <SkillsStack.Navigator screenOptions={styles.navOptions}>
+      <SkillsStack.Screen
+        name="SkillsScreen"
+        component={SkillsScreen}
+        options={{ headerTitle: "Skills" }}
+      />
+    </SkillsStack.Navigator>
+  );
+}
+
+const AboutMeStack = createStackNavigator();
+function AboutMeStackNavigator() {
+  const theme = useTheme();
+  const styles = React.useMemo(() => createStyles(theme), [theme]);
+
+  return (
+    <AboutMeStack.Navigator screenOptions={styles.navOptions}>
+      <AboutMeStack.Screen
+        name="AboutMeScreen"
+        component={AboutMeScreen}
+        options={{ headerTitle: "About Me" }}
+      />
+    </AboutMeStack.Navigator>
   );
 }
 
