@@ -37,7 +37,7 @@ const createStyles = (theme: ColorTheme) => {
       marginVertical: MARGIN,
     },
     containerBar: {
-      height: 50,
+      height: 40,
       flexDirection: "row",
     },
     coloredBar: {

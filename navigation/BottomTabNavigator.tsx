@@ -22,38 +22,48 @@ export default function BottomTabNavigator() {
       tabBarOptions={styles.barOptions}
     >
       <BottomTab.Screen
-        name="Animations"
-        component={PokemonNavigator}
+        name="About Me"
+        component={AboutMeStackNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Portfolio"
-        component={PortfolioNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Work Experience"
-        component={WorkExperienceNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="person-circle-outline" color={color} />
+          ),
         }}
       />
       <BottomTab.Screen
         name="Skills"
         component={SkillsStackNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="code-slash-outline" color={color} />
+          ),
         }}
       />
       <BottomTab.Screen
-        name="About Me"
-        component={AboutMeStackNavigator}
+        name="Animations"
+        component={PokemonNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="play-circle-outline" color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Portfolio"
+        component={PortfolioNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="build-outline" color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Work Experience"
+        component={WorkExperienceNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="briefcase-outline" color={color} />
+          ),
         }}
       />
     </BottomTab.Navigator>
@@ -67,10 +77,6 @@ function TabBarIcon(props: {
   return <Ionicons size={30} {...props} />;
 }
 
-// TODO
-// Portfolio: Press animation with Pan responder. Possibility to manually change order for apps.
-// Work Experience content
-// Skills - Education
 // About Me - Email - Social Network urls - Link to CV & website
 
 const PokemonStack = createStackNavigator();
