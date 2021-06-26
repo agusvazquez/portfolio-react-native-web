@@ -172,7 +172,7 @@ const createStyles = (theme: ColorTheme) => {
       headerStyle: {
         backgroundColor: theme.navigationBackground,
       },
-      headerTintColor: theme.onPrimary,
+      headerTintColor: theme.onSurface,
     },
   };
   return styles;

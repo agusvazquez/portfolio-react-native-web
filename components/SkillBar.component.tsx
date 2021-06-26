@@ -41,7 +41,7 @@ const createStyles = (theme: ColorTheme) => {
       flexDirection: "row",
     },
     coloredBar: {
-      backgroundColor: theme.onSurface,
+      backgroundColor: theme.onPrimary,
       borderTopLeftRadius: BORDER_RADIUS,
       borderBottomLeftRadius: BORDER_RADIUS,
     },
