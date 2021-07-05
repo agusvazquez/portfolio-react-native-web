@@ -16,8 +16,8 @@ const WorkExperienceScreen = () => {
       <Timeline
         data={DATA}
         listViewStyle={styles.timeline}
-        lineColor={theme.onPrimary}
-        circleColor={theme.onPrimary}
+        lineColor={theme.primary}
+        circleColor={theme.primary}
         timeStyle={styles.timelineDate}
         titleStyle={styles.timelineTitle}
         descriptionStyle={styles.timelineDescription}
@@ -32,13 +32,13 @@ const createStyles = (theme: ColorTheme) => {
       paddingTop: 10,
     },
     timelineDate: {
-      color: theme.onPrimary,
+      color: theme.primary,
     },
     timelineTitle: {
-      color: theme.onPrimary,
+      color: theme.primary,
     },
     timelineDescription: {
-      color: theme.onPrimary,
+      color: theme.primary,
     },
   });
   return styles;

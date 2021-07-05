@@ -31,7 +31,7 @@ const createStyles = (theme: ColorTheme) => {
       marginHorizontal: MARGIN,
     },
     title: {
-      color: theme.onPrimary,
+      color: theme.primary,
       fontSize: 16,
       fontWeight: "bold",
       marginVertical: MARGIN,
@@ -41,7 +41,7 @@ const createStyles = (theme: ColorTheme) => {
       flexDirection: "row",
     },
     coloredBar: {
-      backgroundColor: theme.onPrimary,
+      backgroundColor: theme.primary,
       borderTopLeftRadius: BORDER_RADIUS,
       borderBottomLeftRadius: BORDER_RADIUS,
     },

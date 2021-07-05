@@ -4,7 +4,7 @@ import { LightColorTheme } from "./Light.theme";
 
 export interface ColorTheme {
   primary: string;
-  onPrimary: string;
+  primary: string;
   surface: string;
   onSurface: string;
   background: string;

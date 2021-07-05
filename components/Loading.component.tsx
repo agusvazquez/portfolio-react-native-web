@@ -14,7 +14,7 @@ const Loading = ({ loading }: Props) => {
   else
     return (
       <View style={styles.container}>
-        <ActivityIndicator size="large" color={theme.onPrimary} />
+        <ActivityIndicator size="large" color={theme.primary} />
       </View>
     );
 };

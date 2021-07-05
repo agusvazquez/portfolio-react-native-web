@@ -104,7 +104,7 @@ export default function PokemonSwiper() {
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
     headerText: {
-      color: theme.onPrimary,
+      color: theme.primary,
       fontSize: 16,
       fontWeight: "bold",
       marginVertical: 10,

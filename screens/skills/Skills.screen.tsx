@@ -29,7 +29,7 @@ const SkillsScreen = () => {
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
     text: {
-      color: theme.onPrimary,
+      color: theme.primary,
     },
     footer: {
       height: 10,

@@ -85,7 +85,7 @@ const createStyles = (theme: ColorTheme) => {
       fontWeight: "bold",
     },
     headerText: {
-      color: theme.onPrimary,
+      color: theme.primary,
     },
   });
   return styles;

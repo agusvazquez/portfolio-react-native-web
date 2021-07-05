@@ -39,26 +39,34 @@ const AboutMeScreen = () => {
         <Text>{headline}</Text>
         {social.map((item) => {
           const { name } = item;
-          return <Text>{name}</Text>;
+          return <Text key={name}>{name}</Text>;
         })}
 
         <Text>{about_me}</Text>
 
         <View style={styles.badgeContainer}>
           {libraries.map((library) => {
-            return <Badge badgeStyle={styles.badge} value={library} />;
+            return (
+              <Badge key={library} badgeStyle={styles.badge} value={library} />
+            );
           })}
         </View>
 
         <View style={styles.badgeContainer}>
           {languages.map((language) => {
-            return <Badge badgeStyle={styles.badge} value={language} />;
+            return (
+              <Badge
+                key={language}
+                badgeStyle={styles.badge}
+                value={language}
+              />
+            );
           })}
         </View>
 
         {education.map((item) => {
           const { name } = item;
-          return <Text>{name}</Text>;
+          return <Text key={name}>{name}</Text>;
         })}
       </ScrollView>
     </Background>
@@ -68,7 +76,7 @@ const AboutMeScreen = () => {
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
     text: {
-      color: theme.onPrimary,
+      color: theme.primary,
     },
     avatar: {
       marginTop: 20,
