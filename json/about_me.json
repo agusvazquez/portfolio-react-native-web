@@ -1,0 +1,89 @@
+{
+  "profile_image": "https://portfolio.agustinvazquez.com/assets/profile/profile_picture.jpg",
+  "name": "Agustin Vazquez",
+  "email": "aguss.vazquez@gmail.com",
+  "social": [
+    {
+      "name": "Toptal",
+      "icon": "",
+      "url": "https://www.toptal.com/resume/agustin-vazquez"
+    },
+    {
+      "name": "Github",
+      "icon": "",
+      "url": "https://github.com/agusvazquez"
+    },
+    {
+      "name": "Instagram",
+      "icon": "",
+      "url": "https://www.instagram.com/agussvazquez"
+    },
+    {
+      "name": "Linkedin",
+      "icon": "",
+      "url": "https://www.linkedin.com/in/agustinvazquez"
+    },
+    {
+      "name": "Twitter",
+      "icon": "",
+      "url": "https://twitter.com/agusssvazquez"
+    },
+    {
+      "name": "Facebook",
+      "icon": "",
+      "url": "https://www.facebook.com/agustin.vazquez.75"
+    }
+  ],
+  "libraries": [
+    "In app purchase",
+    "Google Pay",
+    "Apple Pay",
+    "Google Sign In",
+    "Facebook Sign In",
+    "Apple Sign In",
+    "Firebase Analytics",
+    "Firebase AB Testing",
+    "React Navigation",
+    "Redux",
+    "Redux Thunk",
+    "Axios",
+    "API Sauce",
+    "Graph QL",
+    "Apollo Client",
+    "Code Push",
+    "Google Places API",
+    "Location",
+    "Geofencing",
+    "Android Instant Apps",
+    "IOs App Clips",
+    "JEST",
+    "Appium",
+    "AWS Device Farm",
+    "Expo",
+    "Native Modules",
+    "Bridging"
+  ],
+  "languages": ["Javascript", "Typescript", "Java", "Objective C", "Swift"],
+  "education": [
+    {
+      "name": "Universidad Tecnologica Nacional",
+      "degree": "Project Management Expert",
+      "year": "2017",
+      "status": "Completed"
+    },
+    {
+      "name": "Universidad de Buenos Aires",
+      "degree": "Software Engineering",
+      "year": "2008-2013",
+      "status": "Abandoned"
+    },
+    {
+      "name": "High School ORT",
+      "degree": "Information and Communication Technology",
+      "year": "2007",
+      "status": "Completed"
+    }
+  ],
+  "headline": "I'm a Buenos Aires based React Native Developer. My personal goal is to improve the way of living of people by creating innovative mobile products.",
+  "about_me": "I started mobile development back on 2011, when only a native approach (Java / Obj-C) was possible for building mobile apps. On 2018 I discovered React Native and continued working until today. During my career, I have also worked with databases, AWS, APIs and small websites (this site is hosted in AWS using a cloudfront and static website in S3). In my free time I like playing soccer/videogames with friends and also cooking."
+}
