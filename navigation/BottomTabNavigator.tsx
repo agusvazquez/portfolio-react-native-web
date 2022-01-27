@@ -53,7 +53,7 @@ export default function BottomTabNavigator() {
         component={PortfolioNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="build-outline" color={color} />
+            <TabBarIcon name="briefcase-outline" color={color} />
           ),
         }}
       />
@@ -62,7 +62,7 @@ export default function BottomTabNavigator() {
         component={WorkExperienceNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="briefcase-outline" color={color} />
+            <TabBarIcon name="build-outline" color={color} />
           ),
         }}
       />
