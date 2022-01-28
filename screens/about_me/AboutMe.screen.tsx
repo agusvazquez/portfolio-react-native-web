@@ -37,11 +37,10 @@ const AboutMeScreen = () => {
     const { name, icon, url } = item;
     return <TouchableOpacity onPress={() => Linking.openURL(url)}>
         {name == 'Toptal' ? 
-        <Image key={name} style={styles.iconStyle} source={{uri: icon}} /> : 
+        <Image  style={styles.iconStyle} source={{uri: icon}} /> : 
         <Ionicons size={ICON_SIZE}
           color={theme.primary}
-          name={icon}
-          key={name}/> }
+          name={icon}/> }
       </TouchableOpacity>
   }
 
@@ -76,7 +75,7 @@ const AboutMeScreen = () => {
 
         <View style={styles.containerSocial}>
         {social.map((item) => {
-            return <SocialIcon item={item}/>
+            return <SocialIcon key={"social_" + item.name} item={item}/>
         })}
         </View>
 
@@ -85,9 +84,9 @@ const AboutMeScreen = () => {
 
         <Text style={styles.textHeader}>Platforms</Text>
         <View style={styles.containerPlatforms}>
-        {platforms.map((item) => {
+        {platforms.map((item, index) => {
           const {name, icon} = item;
-          return <PlatformView name={name} icon={icon} />
+          return <PlatformView key={"platform_" + index} name={name} icon={icon} />
         })}
         </View>
 
