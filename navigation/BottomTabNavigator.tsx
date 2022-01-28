@@ -31,15 +31,6 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="Skills"
-        component={SkillsStackNavigator}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="code-slash-outline" color={color} />
-          ),
-        }}
-      />
-      <BottomTab.Screen
         name="Animations"
         component={PokemonNavigator}
         options={{

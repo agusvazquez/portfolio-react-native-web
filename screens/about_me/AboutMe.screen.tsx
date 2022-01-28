@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, ScrollView, Text, View, TouchableOpacity, Linking, Image } from "react-native";
-import { Avatar, Badge } from "react-native-elements";
+import { Avatar, Badge, Button } from "react-native-elements";
 import { Ionicons } from "@expo/vector-icons";
 
 import { Background } from "../../components/ui.component";
@@ -22,11 +22,13 @@ const AboutMeScreen = () => {
     about_me,
     profile_image,
     name,
+    role,
     email,
     social,
     libraries,
     languages,
     platforms,
+    resumeUrl
   } = DATA;
 
   
@@ -44,7 +46,7 @@ const AboutMeScreen = () => {
   }
 
   const PlatformView = ({name, icon}) => {
-    return <View>
+    return <View style={styles.containerPlatform}>
       <Image style={styles.iconStyle} source={{uri: icon}} />
       <Text style={styles.text}>{name}</Text>
     </View>
@@ -54,6 +56,7 @@ const AboutMeScreen = () => {
   return (
     <Background>
       <ScrollView style={styles.container}>
+        
         <Avatar
           rounded
           size="xlarge"
@@ -63,7 +66,9 @@ const AboutMeScreen = () => {
           }}
         />
 
+<Text style={styles.textRole}>{role}</Text> 
         <Text style={styles.textName}>{name}</Text>
+        
         <TouchableOpacity onPress={() => Linking.openURL('mailto:' + email)}>
           <Text style={styles.textEmail}>{email}</Text>
         </TouchableOpacity>
@@ -107,6 +112,10 @@ const AboutMeScreen = () => {
             );
           })}
         </View>
+
+        <Button title="Download CV" onPress={() => Linking.openURL(resumeUrl)}/>
+
+        <View style={{height:10}}/>
       </ScrollView>
     </Background>
   );
@@ -124,11 +133,14 @@ const createStyles = (theme: ColorTheme) => {
       alignSelf: "center",
     },
     containerPlatforms: {
-      alignSelf: 'center',
       flexDirection:'row',
       alignItems: 'center',
       justifyContent: 'space-evenly',
       marginVertical: 10,
+    },
+    containerPlatform: {
+      alignItems: 'center',
+      justifyContent: 'center'
     },
     containerSocial: {
       width: 300,
@@ -138,6 +150,7 @@ const createStyles = (theme: ColorTheme) => {
       justifyContent: 'space-evenly',
       marginVertical: 10,
     },
+    
     iconStyle: {
       tintColor: theme.primary, 
       width: ICON_SIZE, 
@@ -147,9 +160,15 @@ const createStyles = (theme: ColorTheme) => {
     text: {
       color: theme.primary,
     },
-    textName: {
+    textRole: {
       color: theme.primary,
       fontSize: 30,
+      fontWeight: 'bold',
+      alignSelf: 'center'
+    },
+    textName: {
+      color: theme.primary,
+      fontSize: 24,
       fontWeight: 'bold',
       alignSelf: 'center'
     },

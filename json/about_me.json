@@ -1,7 +1,9 @@
 {
   "profile_image": "https://portfolio.agustinvazquez.com/assets/profile/profile_picture.jpg",
   "name": "Agustin Vazquez",
+  "role": "React Native Developer",
   "email": "aguss.vazquez@gmail.com",
+  "resumeUrl": "https://docs.google.com/document/d/1WrYOtME9T8AbNlqMEVVUaxxDuXbIj4Y-EZo47g3rvJM/edit?usp=sharing",
   "social": [
     {
       "name": "Toptal",
@@ -41,11 +43,15 @@
     },
     {
       "name": "Android", 
-      "icon": "https://portfolio.agustinvazquez.com/assets/icons/react_native.png"
+      "icon": "https://portfolio.agustinvazquez.com/assets/icons/android.png"
     },
     {
-      "name": "IOs", 
-      "icon": "https://portfolio.agustinvazquez.com/assets/icons/react_native.png"
+      "name": "", 
+      "icon": "https://portfolio.agustinvazquez.com/assets/icons/ios.png"
+    },
+    {
+      "name": "", 
+      "icon": "https://portfolio.agustinvazquez.com/assets/icons/aws.png"
     }
   ],
   "libraries": [
@@ -76,7 +82,7 @@
     "AWS Device Farm",
     "Expo",
     "Native Modules",
-    "Bridging",
+    "Bridging"
   ],
   "languages": ["Javascript", "Typescript", "Java", "Objective C", "Swift"],
   "headline": "I'm a Buenos Aires based React Native Developer. My personal goal is to improve the way of living of people by creating innovative mobile products.",
