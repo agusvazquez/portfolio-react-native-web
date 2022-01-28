@@ -1,9 +1,8 @@
 import { ColorTheme } from "./Theme.interface";
 
 export const DarkColorTheme: ColorTheme = {
-  primary: "#03a9f4",
   primary: "#fff",
-  surface: "gray",
+  surface: "#AAAAAA",
   onSurface: "white",
   background: "#3f3f3f",
   navigationBackground: "#595959",

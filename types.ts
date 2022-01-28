@@ -19,6 +19,12 @@ export type PortfolioItemType = {
   currentlyWorking: boolean;
 };
 
+export type SocialItemType = {
+  name: string;
+  url: string;
+  icon: string;
+};
+
 export type SkillItemType = {
   name: string;
   level: number;
