@@ -8,7 +8,6 @@ import PortfolioScreen from "../screens/portfolio/PortfolioScreen.screen";
 import { ColorTheme, useTheme } from "../theme/Theme.interface";
 import WorkExperienceScreen from "../screens/work_experience/WorkExperience.screen";
 import AboutMeScreen from "../screens/about_me/AboutMe.screen";
-import SkillsScreen from "../screens/skills/Skills.screen";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -115,22 +114,6 @@ function WorkExperienceNavigator() {
         options={{ headerTitle: "Work Experience" }}
       />
     </WorkExperienceStack.Navigator>
-  );
-}
-
-const SkillsStack = createStackNavigator();
-function SkillsStackNavigator() {
-  const theme = useTheme();
-  const styles = React.useMemo(() => createStyles(theme), [theme]);
-
-  return (
-    <SkillsStack.Navigator screenOptions={styles.navOptions}>
-      <SkillsStack.Screen
-        name="SkillsScreen"
-        component={SkillsScreen}
-        options={{ headerTitle: "Skills" }}
-      />
-    </SkillsStack.Navigator>
   );
 }
 
