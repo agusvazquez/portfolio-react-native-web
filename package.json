@@ -6,6 +6,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build:aws": "expo export --public-url https://sample.agustinvazquez.com/expo",
+    "build:web": "expo build:web",
     "eject": "expo eject",
     "test": "jest --watchAll"
   },
