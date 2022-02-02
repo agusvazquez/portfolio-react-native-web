@@ -115,7 +115,7 @@ const createStyles = (theme: ColorTheme) => {
     title: {
       fontFamily: Fonts.bold, 
       fontWeight: 'normal', 
-      color: theme.background
+      color: 'black',
     },
     buttonTitle: {
       fontFamily: Fonts.bold,
