@@ -9,6 +9,8 @@ import { ColorTheme, useTheme } from "../theme/Theme.interface";
 import WorkExperienceScreen from "../screens/work_experience/WorkExperience.screen";
 import AboutMeScreen from "../screens/about_me/AboutMe.screen";
 
+import Fonts from "../constants/fonts";
+
 const BottomTab = createBottomTabNavigator();
 
 export default function BottomTabNavigator() {
@@ -146,7 +148,10 @@ const createStyles = (theme: ColorTheme) => {
       headerStyle: {
         backgroundColor: theme.navigationBackground,
       },
-      headerTintColor: theme.onSurface,
+      headerTitleStyle: {
+        fontFamily: Fonts.bold,
+        color: theme.onSurface
+      }
     },
   };
   return styles;

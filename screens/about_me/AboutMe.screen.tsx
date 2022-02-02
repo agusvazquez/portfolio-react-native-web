@@ -8,6 +8,7 @@ import { ColorTheme, useTheme } from "../../theme/Theme.interface";
 import DATA from "../../json/about_me.json";
 
 import { SocialItemType } from "../../types";
+import Fonts from "../../constants/fonts";
 
 interface SocialIconProps {
   item: SocialItemType;
@@ -113,9 +114,16 @@ const AboutMeScreen = () => {
           })}
         </View>
 
-        <Button style={styles.button} title="Source Code" onPress={() => Linking.openURL(sourceCode)}/>
+        <Button 
+          containerStyle={styles.button} 
+          titleStyle={styles.buttonTitle} 
+          title="Source Code" 
+          onPress={() => Linking.openURL(sourceCode)} />
 
-        <Button style={styles.button} title="Download CV" onPress={() => Linking.openURL(resumeUrl)}/>
+        <Button 
+          containerStyle={styles.button} 
+          titleStyle={styles.buttonTitle}  
+          title="Download CV" onPress={() => Linking.openURL(resumeUrl)}/>
 
         <View style={{height:10}}/>
       </ScrollView>
@@ -170,36 +178,39 @@ const createStyles = (theme: ColorTheme) => {
     },
     text: {
       color: theme.primary,
+      fontFamily: Fonts.regular
     },
     textPlatform: {
       color: theme.tint,
+      fontFamily: Fonts.regular
     },
     textRole: {
       color: theme.primary,
+      fontFamily: Fonts.bold,
       fontSize: 30,
-      fontWeight: 'bold',
       alignSelf: 'center'
     },
     textName: {
       color: theme.primary,
+      fontFamily: Fonts.bold,
       fontSize: 24,
-      fontWeight: 'bold',
       alignSelf: 'center'
     },
     textHeader: {
       color: theme.primary,
+      fontFamily: Fonts.bold,
       fontSize: 20,
-      fontWeight: 'bold',
       marginVertical: 10,
     },
     textEmail: {
       color: theme.primary,
+      fontFamily: Fonts.regular,
       alignSelf: 'center'
     },
     textHeadline: {
       color: theme.primary,
+      fontFamily: Fonts.bold,
       textAlign: 'center',
-      fontWeight: 'bold',
       marginTop: 10,
       marginHorizontal: 20
     },
@@ -218,6 +229,9 @@ const createStyles = (theme: ColorTheme) => {
     },
     button: {
       margin: 10
+    },
+    buttonTitle: {
+      fontFamily: Fonts.bold,
     }
   });
   return styles;

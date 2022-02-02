@@ -8,6 +8,8 @@ interface Props {
 }
 
 const SkillBar = ({ name, value }: Props) => {
+  //Not used any more
+  
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
 

@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import { getTechIcon } from "../../assets/technology";
+import Fonts from "../../constants/fonts";
 import { ColorTheme, useTheme } from "../../theme/Theme.interface";
 import { PortfolioItemType } from "../../types";
 
@@ -79,10 +80,10 @@ const createStyles = (theme: ColorTheme) => {
       height: 15,
     },
     text: {
+      fontFamily: Fonts.bold,
       position: "absolute",
       top: 5,
       right: 5,
-      fontWeight: "bold",
     },
     headerText: {
       color: theme.primary,

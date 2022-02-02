@@ -11,6 +11,7 @@ import Deck from "../../components/Deck.component";
 import Loading from "../../components/Loading.component";
 import { Background } from "../../components/ui.component";
 import { PokemonListType } from "../../types";
+import Fonts from "../../constants/fonts";
 
 const LIST_SIZE = 10;
 const POKEMON_WIKI_URL = "https://pokemon.fandom.com/es/wiki/";
@@ -63,10 +64,11 @@ export default function PokemonSwiper() {
     return (
       <Card>
         <Card.Image style={{ resizeMode: "contain" }} source={{ uri }} />
-        <Card.Title h4>{upperCasedName}</Card.Title>
+        <Card.Title h4Style={styles.title} h4>{upperCasedName}</Card.Title>
         <Card.Divider />
 
         <Button
+          titleStyle={styles.buttonTitle}
           title="View More"
           onPress={() => Linking.openURL(POKEMON_WIKI_URL + upperCasedName)}
         />
@@ -77,10 +79,10 @@ export default function PokemonSwiper() {
   const renderNoMoreCards = () => {
     return (
       <Card>
-        <Card.Title>All Done</Card.Title>
+        <Card.Title style={styles.title}>All Done</Card.Title>
         <Card.Divider />
 
-        <Button title="Fetch More" onPress={fetchMorePressed} />
+        <Button titleStyle={styles.buttonTitle} title="Fetch More" onPress={fetchMorePressed} />
       </Card>
     );
   };
@@ -105,11 +107,19 @@ const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
     headerText: {
       color: theme.primary,
+      fontFamily: Fonts.bold,
       fontSize: 16,
-      fontWeight: "bold",
       marginVertical: 10,
       alignSelf: "center",
     },
+    title: {
+      fontFamily: Fonts.bold, 
+      fontWeight: 'normal', 
+      color: theme.background
+    },
+    buttonTitle: {
+      fontFamily: Fonts.bold,
+    }
   });
   return styles;
 };

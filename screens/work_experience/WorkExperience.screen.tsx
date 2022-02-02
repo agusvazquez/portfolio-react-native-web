@@ -6,6 +6,7 @@ import Timeline from "react-native-timeline-flatlist";
 import { Background } from "../../components/ui.component";
 import { ColorTheme, useTheme } from "../../theme/Theme.interface";
 import DATA from "../../json/work_experience.json";
+import Fonts from "../../constants/fonts";
 
 const WorkExperienceScreen = () => {
   const theme = useTheme();
@@ -32,12 +33,15 @@ const createStyles = (theme: ColorTheme) => {
       paddingTop: 10,
     },
     timelineDate: {
+      fontFamily: Fonts.bold,
       color: theme.primary,
     },
     timelineTitle: {
+      fontFamily: Fonts.bold,
       color: theme.primary,
     },
     timelineDescription: {
+      fontFamily: Fonts.regular,
       color: theme.primary,
     },
   });
