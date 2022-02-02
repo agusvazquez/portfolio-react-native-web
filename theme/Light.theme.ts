@@ -1,7 +1,8 @@
 import { ColorTheme } from "./Theme.interface";
 
 export const LightColorTheme: ColorTheme = {
-  primary: "#357EC7",
+  primary: "black",
+  tint: "#357EC7",
   surface: "lightgray",
   onSurface: "white",
   background: "#ecf0f1",

@@ -28,7 +28,8 @@ const AboutMeScreen = () => {
     libraries,
     languages,
     platforms,
-    resumeUrl
+    resumeUrl,
+    sourceCode
   } = DATA;
 
   
@@ -37,7 +38,7 @@ const AboutMeScreen = () => {
     const { name, icon, url } = item;
     return <TouchableOpacity onPress={() => Linking.openURL(url)}>
         {name == 'Toptal' ? 
-        <Image  style={styles.iconStyle} source={{uri: icon}} /> : 
+        <Image  style={styles.iconToptal} source={{uri: icon}} /> : 
         <Ionicons size={ICON_SIZE}
           color={theme.primary}
           name={icon}/> }
@@ -46,8 +47,8 @@ const AboutMeScreen = () => {
 
   const PlatformView = ({name, icon}) => {
     return <View style={styles.containerPlatform}>
-      <Image style={styles.iconStyle} source={{uri: icon}} />
-      <Text style={styles.text}>{name}</Text>
+      <Image style={styles.iconPlatform} source={{uri: icon}} />
+      <Text style={styles.textPlatform}>{name}</Text>
     </View>
   }
 
@@ -65,7 +66,7 @@ const AboutMeScreen = () => {
           }}
         />
 
-<Text style={styles.textRole}>{role}</Text> 
+        <Text style={styles.textRole}>{role}</Text> 
         <Text style={styles.textName}>{name}</Text>
         
         <TouchableOpacity onPress={() => Linking.openURL('mailto:' + email)}>
@@ -112,7 +113,9 @@ const AboutMeScreen = () => {
           })}
         </View>
 
-        <Button title="Download CV" onPress={() => Linking.openURL(resumeUrl)}/>
+        <Button style={styles.button} title="Source Code" onPress={() => Linking.openURL(sourceCode)}/>
+
+        <Button style={styles.button} title="Download CV" onPress={() => Linking.openURL(resumeUrl)}/>
 
         <View style={{height:10}}/>
       </ScrollView>
@@ -121,6 +124,12 @@ const AboutMeScreen = () => {
 };
 
 const ICON_SIZE = 32;
+
+const ICON_STYLE = {
+  width: ICON_SIZE, 
+  height: ICON_SIZE,
+  resizeMode: 'contain',
+}
 
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
@@ -150,14 +159,20 @@ const createStyles = (theme: ColorTheme) => {
       marginVertical: 10,
     },
     
-    iconStyle: {
+    iconToptal: {
+      ...ICON_STYLE,
       tintColor: theme.primary, 
-      width: ICON_SIZE, 
-      height: ICON_SIZE,
-      resizeMode: 'contain',
+      
+    },
+    iconPlatform: {
+      ...ICON_STYLE,
+      tintColor: theme.tint, 
     },
     text: {
       color: theme.primary,
+    },
+    textPlatform: {
+      color: theme.tint,
     },
     textRole: {
       color: theme.primary,
@@ -201,6 +216,9 @@ const createStyles = (theme: ColorTheme) => {
       marginHorizontal: 5,
       margin: 1,
     },
+    button: {
+      margin: 10
+    }
   });
   return styles;
 };

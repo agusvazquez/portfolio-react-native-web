@@ -1,6 +1,6 @@
 [
   {
-    "time": "2021",
+    "time": "Now",
     "title": "Fairmarket Home (via Toptal)",
     "description": "- Developed a home management app in React Native using GraphQL with Apollo client.\n- Implemented Android instant apps and iOS 14 app clips.\n- Created end to end tests using Appium and AWS Device Farm.\n- Added native libraries such as FacebookSDK, Google Sign In, Firebase Analytics, AppsFlyer, OneSignal, CodePush."
   },

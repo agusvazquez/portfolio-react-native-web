@@ -1,5 +1,5 @@
 import React from "react";
-import { Ionicons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -25,7 +25,7 @@ export default function BottomTabNavigator() {
         component={AboutMeStackNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="person-circle-outline" color={color} />
+            <TabBarIcon name="person" color={color} />
           ),
         }}
       />
@@ -34,7 +34,7 @@ export default function BottomTabNavigator() {
         component={PokemonNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="play-circle-outline" color={color} />
+            <TabBarIcon name="play-circle-filled" color={color} />
           ),
         }}
       />
@@ -43,7 +43,7 @@ export default function BottomTabNavigator() {
         component={PortfolioNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="briefcase-outline" color={color} />
+            <TabBarIcon name="work" color={color} />
           ),
         }}
       />
@@ -52,7 +52,7 @@ export default function BottomTabNavigator() {
         component={WorkExperienceNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="build-outline" color={color} />
+            <TabBarIcon name="construction" color={color} />
           ),
         }}
       />
@@ -61,10 +61,10 @@ export default function BottomTabNavigator() {
 }
 
 function TabBarIcon(props: {
-  name: React.ComponentProps<typeof Ionicons>["name"];
+  name: React.ComponentProps<typeof MaterialIcons>["name"];
   color: string;
 }) {
-  return <Ionicons size={30} {...props} />;
+  return <MaterialIcons size={30} {...props} />;
 }
 
 // About Me - Email - Social Network urls - Link to CV & website

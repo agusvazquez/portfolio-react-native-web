@@ -46,6 +46,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       
+      <Text style={styles.text}>This website works only on mobile. Alternatively you can also follow this steps for a native behavior.</Text>
       <Text style={styles.text}>Step 1: Download Expo App.</Text>
       <View style={styles.column}>
           
