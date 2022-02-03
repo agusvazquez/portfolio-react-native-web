@@ -222,7 +222,7 @@ const createStyles = (theme: ColorTheme) => {
     badge: {
       height: 24,
       borderRadius: 12,
-      borderWidth: 1,
+      borderWidth: 0,
       borderColor: theme.surface,
       marginHorizontal: 5,
       margin: 1,
