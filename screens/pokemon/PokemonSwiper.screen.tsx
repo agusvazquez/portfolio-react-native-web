@@ -110,7 +110,8 @@ export default function PokemonSwiper() {
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
     card: {
-      backgroundColor: 'lightgray'
+      backgroundColor: 'lightgray',
+      borderRadius: 5,
     },
     headerText: {
       color: theme.primary,

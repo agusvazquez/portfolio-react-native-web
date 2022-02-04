@@ -144,7 +144,7 @@ const Deck = ({
             key={keyExtractor(item)}
             style={[
               styles.cardStyle,
-              { top: 10 * (elementIndex - currentIndex), zIndex: 5 },
+              { top: 15 * (elementIndex - currentIndex), zIndex: 5 },
             ]}
           >
             {renderCard(item)}
