@@ -115,13 +115,15 @@ const AboutMeScreen = () => {
         </View>
 
         <Button 
-          containerStyle={styles.button} 
+          containerStyle={styles.buttonContainer} 
+          buttonStyle={styles.button}
           titleStyle={styles.buttonTitle} 
           title="Source Code" 
           onPress={() => Linking.openURL(sourceCode)} />
 
         <Button 
-          containerStyle={styles.button} 
+          containerStyle={styles.buttonContainer} 
+          buttonStyle={styles.button}
           titleStyle={styles.buttonTitle}  
           title="Download CV" onPress={() => Linking.openURL(resumeUrl)}/>
 
@@ -226,9 +228,13 @@ const createStyles = (theme: ColorTheme) => {
       borderColor: theme.surface,
       marginHorizontal: 5,
       margin: 1,
+      backgroundColor: theme.tint
+    },
+    buttonContainer: {
+      margin: 10,
     },
     button: {
-      margin: 10
+      backgroundColor: theme.tint
     },
     buttonTitle: {
       fontFamily: Fonts.bold,

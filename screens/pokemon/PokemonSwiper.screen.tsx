@@ -62,12 +62,13 @@ export default function PokemonSwiper() {
     const upperCasedName = name.charAt(0).toUpperCase() + name.slice(1);
 
     return (
-      <Card>
+      <Card containerStyle={styles.card}>
         <Card.Image style={{ resizeMode: "contain" }} source={{ uri }} />
         <Card.Title h4Style={styles.title} h4>{upperCasedName}</Card.Title>
         <Card.Divider />
 
         <Button
+          buttonStyle={styles.button}
           titleStyle={styles.buttonTitle}
           title="View More"
           onPress={() => Linking.openURL(POKEMON_WIKI_URL + upperCasedName)}
@@ -78,11 +79,14 @@ export default function PokemonSwiper() {
 
   const renderNoMoreCards = () => {
     return (
-      <Card>
+      <Card containerStyle={styles.card}>
         <Card.Title style={styles.title}>All Done</Card.Title>
         <Card.Divider />
 
-        <Button titleStyle={styles.buttonTitle} title="Fetch More" onPress={fetchMorePressed} />
+        <Button 
+          buttonStyle={styles.button}
+          titleStyle={styles.buttonTitle} 
+          title="Fetch More" onPress={fetchMorePressed} />
       </Card>
     );
   };
@@ -105,6 +109,9 @@ export default function PokemonSwiper() {
 
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
+    card: {
+      backgroundColor: 'lightgray'
+    },
     headerText: {
       color: theme.primary,
       fontFamily: Fonts.bold,
@@ -116,6 +123,9 @@ const createStyles = (theme: ColorTheme) => {
       fontFamily: Fonts.bold, 
       fontWeight: 'normal', 
       color: 'black',
+    },
+    button: {
+      backgroundColor: theme.tint
     },
     buttonTitle: {
       fontFamily: Fonts.bold,

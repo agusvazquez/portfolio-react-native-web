@@ -1,7 +1,7 @@
 
 const Fonts = {
-    regular: "PlayfairDisplay_400Regular",
-    bold: "PlayfairDisplay_700Bold"
+    regular: "Roboto_400Regular",
+    bold: "Roboto_700Bold"
 }
 
 export default Fonts;
