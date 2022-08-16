@@ -39,19 +39,19 @@
   ],
   "platforms": [
     {
-      "name": "React Native", 
+      "name": "React Native",
       "icon": "https://portfolio.agustinvazquez.com/assets/icons/react_native.png"
     },
     {
-      "name": "Android", 
+      "name": "Android",
       "icon": "https://portfolio.agustinvazquez.com/assets/icons/android.png"
     },
     {
-      "name": "", 
+      "name": "",
       "icon": "https://portfolio.agustinvazquez.com/assets/icons/ios.png"
     },
     {
-      "name": "", 
+      "name": "",
       "icon": "https://portfolio.agustinvazquez.com/assets/icons/aws.png"
     }
   ],
@@ -73,7 +73,9 @@
     "Apollo Client",
     "Code Push",
     "Google Places API",
-    "Maps",
+    "Google Maps",
+    "Apple Maps",
+    "Directions API",
     "Location",
     "Geofencing",
     "Android Instant Apps",
@@ -83,7 +85,9 @@
     "AWS Device Farm",
     "Expo",
     "Native Modules",
-    "Bridging"
+    "Bridging",
+    "Auth0",
+    "Sentry"
   ],
   "languages": ["Javascript", "Typescript", "Java", "Objective C", "Swift"],
   "headline": "I'm a Buenos Aires based React Native Developer. My personal goal is to improve the way of living of people by creating innovative mobile products.",

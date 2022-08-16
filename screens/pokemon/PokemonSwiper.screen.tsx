@@ -64,7 +64,9 @@ export default function PokemonSwiper() {
     return (
       <Card containerStyle={styles.card}>
         <Card.Image style={{ resizeMode: "contain" }} source={{ uri }} />
-        <Card.Title h4Style={styles.title} h4>{upperCasedName}</Card.Title>
+        <Card.Title h4Style={styles.title} h4>
+          {upperCasedName}
+        </Card.Title>
         <Card.Divider />
 
         <Button
@@ -83,10 +85,12 @@ export default function PokemonSwiper() {
         <Card.Title style={styles.title}>All Done</Card.Title>
         <Card.Divider />
 
-        <Button 
+        <Button
           buttonStyle={styles.button}
-          titleStyle={styles.buttonTitle} 
-          title="Fetch More" onPress={fetchMorePressed} />
+          titleStyle={styles.buttonTitle}
+          title="Fetch More"
+          onPress={fetchMorePressed}
+        />
       </Card>
     );
   };
@@ -110,7 +114,7 @@ export default function PokemonSwiper() {
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
     card: {
-      backgroundColor: 'lightgray',
+      backgroundColor: "lightgray",
       borderRadius: 5,
     },
     headerText: {
@@ -121,16 +125,17 @@ const createStyles = (theme: ColorTheme) => {
       alignSelf: "center",
     },
     title: {
-      fontFamily: Fonts.bold, 
-      fontWeight: 'normal', 
-      color: 'black',
+      fontFamily: Fonts.bold,
+      fontWeight: "normal",
+      color: "black",
+      userSelect: "none",
     },
     button: {
-      backgroundColor: theme.tint
+      backgroundColor: theme.tint,
     },
     buttonTitle: {
       fontFamily: Fonts.bold,
-    }
+    },
   });
   return styles;
 };

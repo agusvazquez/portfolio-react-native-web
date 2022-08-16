@@ -1,5 +1,16 @@
 [
   {
+    "name": "Fetch AI",
+    "description": "Test",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/fetchai.jpg",
+    "url_web": "https://fetch.ai/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.fetchai",
+    "url_ios": "https://apps.apple.com/us/app/fetch-ai/id1613536557",
+    "tintColor": "lightgray",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "Present"
+  },
+  {
     "name": "Fairmarket Home",
     "description": "Test",
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/fairmarket.jpg",
@@ -8,7 +19,7 @@
     "url_ios": "https://apps.apple.com/us/app/fairmarket-home/id1499657250",
     "tintColor": "lightgray",
     "platforms": ["react_native", "ios", "android"],
-    "lastWork": "Present"
+    "lastWork": "2022"
   },
   {
     "name": "Scholly Search",
