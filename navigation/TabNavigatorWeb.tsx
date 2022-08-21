@@ -1,15 +1,13 @@
-import { AppBar, Button, Toolbar } from "@mui/material";
-import { useState } from "react";
-import Fonts from "../constants/fonts";
-import useMobile from "../hooks/useMobile";
-import AboutMeScreen from "../screens/about_me/AboutMe.screen";
+import React, { useState } from "react";
+import { View } from "react-native";
 
-import DownloadApp from "../screens/download_app/DownloadApp.screen";
-import PokemonSwiper from "../screens/pokemon/PokemonSwiper.screen";
-import PortfolioScreen from "../screens/portfolio/PortfolioScreen.screen";
-import WorkExperienceScreen from "../screens/work_experience/WorkExperience.screen";
+import { AppBar, Button, Toolbar } from "@mui/material";
+
+import Fonts from "../constants/fonts";
+
 import { ColorTheme, useTheme } from "../theme/Theme.interface";
-import TabNavigatorMobile from "./TabNavigatorMobile";
+import StackNavigators from "./StackNavigators";
+import { createStackNavigator } from "@react-navigation/stack";
 
 const MENU_ITEMS = [
   "About Me",
@@ -19,21 +17,52 @@ const MENU_ITEMS = [
   "Download App",
 ];
 
+const Stack = createStackNavigator();
+
 const RenderContent = ({ tab }: { tab: number }) => {
-  switch (tab) {
-    case 0:
-      return <AboutMeScreen />;
-    case 1:
-      return <PokemonSwiper />;
-    case 2:
-      return <PortfolioScreen />;
-    case 3:
-      return <WorkExperienceScreen />;
-    case 4:
-      return <DownloadApp />;
-    default:
-      return null;
-  }
+  return (
+    <Stack.Navigator defaultScreenOptions={{ headerShown: false }}>
+      {tab === 0 && (
+        <Stack.Screen
+          name="About Me"
+          component={StackNavigators.AboutMeStackNavigator}
+          options={{ headerShown: false }}
+        />
+      )}
+
+      {tab === 1 && (
+        <Stack.Screen
+          name="Animations"
+          component={StackNavigators.PokemonNavigator}
+          options={{ headerShown: false }}
+        />
+      )}
+
+      {tab === 2 && (
+        <Stack.Screen
+          name="Portfolio"
+          component={StackNavigators.PortfolioNavigator}
+          options={{ headerShown: false }}
+        />
+      )}
+
+      {tab === 3 && (
+        <Stack.Screen
+          name="Work Experience"
+          component={StackNavigators.WorkExperienceNavigator}
+          options={{ headerShown: false }}
+        />
+      )}
+
+      {tab === 4 && (
+        <Stack.Screen
+          name="DownloadApp"
+          component={StackNavigators.DownloadAppstackNavigator}
+          options={{ headerShown: false }}
+        />
+      )}
+    </Stack.Navigator>
+  );
 };
 
 const TabNavigator = () => {
@@ -43,33 +72,38 @@ const TabNavigator = () => {
   const [currentTab, setCurrentTab] = useState<number>(0);
 
   return (
-    <AppBar position="static" sx={styles.appbar}>
-      <Toolbar>
-        {MENU_ITEMS.map((page, index) => {
-          const selected = index === currentTab;
-          return (
-            <Button
-              key={page}
-              onClick={() => setCurrentTab(index)}
-              sx={{
-                color: "white",
-                fontFamily: selected ? Fonts.bold : Fonts.regular,
-                display: "block",
-              }}
-            >
-              {page}
-            </Button>
-          );
-        })}
-      </Toolbar>
+    <View style={styles.container}>
+      <AppBar position="static" sx={styles.appbar}>
+        <Toolbar>
+          {MENU_ITEMS.map((page, index) => {
+            const selected = index === currentTab;
+            return (
+              <Button
+                key={page}
+                onClick={() => setCurrentTab(index)}
+                sx={{
+                  color: "white",
+                  fontFamily: selected ? Fonts.bold : Fonts.regular,
+                  display: "block",
+                }}
+              >
+                {page}
+              </Button>
+            );
+          })}
+        </Toolbar>
+      </AppBar>
 
       <RenderContent tab={currentTab} />
-    </AppBar>
+    </View>
   );
 };
 
 const createStyles = (theme: ColorTheme) => {
   const styles = {
+    container: {
+      flex: 1,
+    },
     appbar: {
       backgroundColor: theme.navigationBackground,
     },

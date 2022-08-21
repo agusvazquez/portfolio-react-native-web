@@ -6,9 +6,7 @@ It supports mobile web with react-native-web and the steps to launch it are the 
 
 - run `yarn`
 - For web, run `yarn web`
-- For app, run `yarn start`
+- For iOS, run `yarn ios`
+- For Android, run `yarn android`
 
 This is hosted in https://sample.agustinvazquez.com
-
-If you open it on desktop it will show QR codes to install the app on expo application.
-Otherwise if you are on a phone you will be able to use react-native-web based app.

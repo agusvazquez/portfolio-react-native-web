@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
+import React from "react";
+import { View, StyleSheet, Text, Image } from "react-native";
 import { ColorTheme, useTheme } from "../../theme/Theme.interface";
+import { Background } from "../../components/ui.component";
+import { ScrollView } from "react-native-gesture-handler";
 
 const QR_PLAYSTORE =
   "https://portfolio.agustinvazquez.com/expo/expo_playstore.png";
@@ -14,42 +16,47 @@ const DownloadApp = () => {
   const styles = React.useMemo(() => createStyles(theme), [theme]);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Step 1: Download Expo App.</Text>
-      <View style={styles.column}>
-        <View style={styles.row}>
-          <Text style={styles.text}>Android</Text>
-          <Image style={styles.qrCode} source={{ uri: QR_PLAYSTORE }} />
-        </View>
+    <Background>
+      <ScrollView>
+        <View style={styles.container}>
+          <Text style={styles.text}>Step 1: Download Expo App.</Text>
+          <View style={styles.column}>
+            <View style={styles.row}>
+              <Text style={styles.text}>Android</Text>
+              <Image style={styles.qrCode} source={{ uri: QR_PLAYSTORE }} />
+            </View>
 
-        <View style={styles.row}>
-          <Text style={styles.text}>iOS</Text>
-          <Image style={styles.qrCode} source={{ uri: QR_APPSTORE }} />
-        </View>
-      </View>
+            <View style={styles.row}>
+              <Text style={styles.text}>iOS</Text>
+              <Image style={styles.qrCode} source={{ uri: QR_APPSTORE }} />
+            </View>
+          </View>
 
-      <Text style={styles.text}>Step 2: Scan this QR code in Expo App.</Text>
-      <View style={styles.column}>
-        <View style={styles.row}>
-          <Text style={styles.text}>Android</Text>
-          <Image style={styles.qrCode} source={{ uri: QR_ANDROID }} />
-        </View>
+          <Text style={styles.text}>
+            Step 2: Scan this QR code in Expo App.
+          </Text>
+          <View style={styles.column}>
+            <View style={styles.row}>
+              <Text style={styles.text}>Android</Text>
+              <Image style={styles.qrCode} source={{ uri: QR_ANDROID }} />
+            </View>
 
-        <View style={styles.row}>
-          <Text style={styles.text}>iOS</Text>
-          <Image style={styles.qrCode} source={{ uri: QR_IOS }} />
+            <View style={styles.row}>
+              <Text style={styles.text}>iOS</Text>
+              <Image style={styles.qrCode} source={{ uri: QR_IOS }} />
+            </View>
+          </View>
         </View>
-      </View>
-    </View>
+      </ScrollView>
+    </Background>
   );
 };
 
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      flexGrow: 1,
       alignItems: "center",
-      justifyContent: "center",
       backgroundColor: theme.background,
     },
     column: {
@@ -60,6 +67,7 @@ const createStyles = (theme: ColorTheme) => {
       alignItems: "center",
     },
     text: {
+      marginTop: 10,
       fontWeight: "bold",
       fontSize: 16,
       color: theme.primary,

@@ -7,34 +7,35 @@
 import * as Linking from "expo-linking";
 
 export default {
-  prefixes: [Linking.makeUrl("/")],
+  prefixes: [Linking.makeUrl("/"), "'https://sample.agustinvazquez.com'"],
   config: {
     screens: {
-      TabNavigator: {
+      "About Me": {
         screens: {
-          "About Me": {
-            screens: {
-              AboutMeScreen: "about_me",
-            },
-          },
-          Animations: {
-            screens: {
-              PokemonSwiper: "pokemon_swiper",
-            },
-          },
-          Portfolio: {
-            screens: {
-              PortfolioScreen: "portfolio",
-            },
-          },
-          "Work Experience": {
-            screens: {
-              WorkExperienceScreen: "work_experience",
-            },
-          },
+          AboutMeScreen: "about_me",
         },
       },
-      NotFound: "*",
+      Animations: {
+        screens: {
+          PokemonSwiper: "pokemon_swiper",
+        },
+      },
+      Portfolio: {
+        screens: {
+          PortfolioScreen: "portfolio",
+        },
+      },
+      "Work Experience": {
+        screens: {
+          WorkExperienceScreen: "work_experience",
+        },
+      },
+      DownloadApp: {
+        screens: {
+          DownloadApp: "download",
+        },
+      },
     },
   },
+  NotFound: "*",
 };

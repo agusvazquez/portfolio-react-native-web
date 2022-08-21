@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
-import useWindow from "./useWindow";
+import { useWindowDimensions } from "react-native";
+import { Platform } from "react-native";
 
 const useMobile = () => {
-  const window = useWindow();
-  const isMobile = window.innerWidth <= 768;
-  return isMobile;
+  const { width } = useWindowDimensions();
+  const isMobileDevice =
+    Platform.OS === "android" || Platform.OS === "ios" || width <= 768;
+
+  return isMobileDevice;
 };
 
 export default useMobile;

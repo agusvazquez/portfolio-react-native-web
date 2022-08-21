@@ -1,15 +1,10 @@
-/**
- * If you are not familiar with React Navigation, check out the "Fundamentals" guide:
- * https://reactnavigation.org/docs/getting-started
- *
- */
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import * as React from "react";
 
-import { RootStackParamList } from "../types";
-import TabNavigator from "./TabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
+import useMobile from "../hooks/useMobile";
+import TabNavigatorWeb from "./TabNavigatorWeb";
+import TabNavigatorMobile from "./TabNavigatorMobile";
 
 export default function Navigation() {
   return (
@@ -19,14 +14,11 @@ export default function Navigation() {
   );
 }
 
-// A root stack navigator is often used for displaying modals on top of all other content
-// Read more here: https://reactnavigation.org/docs/modal
-const Stack = createStackNavigator<RootStackParamList>();
-
 function RootNavigator() {
-  return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="TabNavigator" component={TabNavigator} />
-    </Stack.Navigator>
-  );
+  const isMobilePhone = useMobile();
+  if (isMobilePhone) {
+    return <TabNavigatorMobile />;
+  } else {
+    return <TabNavigatorWeb />;
+  }
 }

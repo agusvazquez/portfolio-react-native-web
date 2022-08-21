@@ -5,12 +5,10 @@ import {
   Platform,
   Linking,
   View,
-  Text,
+  useWindowDimensions,
 } from "react-native";
 
 import { Background } from "../../components/ui.component";
-import useMobile from "../../hooks/useMobile";
-import useWindow from "../../hooks/useWindow";
 
 import portfolioData from "../../json/portfolio.json";
 import { ColorTheme, useTheme } from "../../theme/Theme.interface";
@@ -21,8 +19,8 @@ export default function PortfolioScreen() {
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
 
-  const window = useWindow();
-  const COLUMN_COUNT = Math.round(window.innerWidth / 200);
+  const { width } = useWindowDimensions();
+  const COLUMN_COUNT = Math.round(width / 200);
 
   const onItemPressed = (item: PortfolioItemType) => {
     switch (Platform.OS) {
