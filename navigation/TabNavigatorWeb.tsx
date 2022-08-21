@@ -8,6 +8,7 @@ import DownloadApp from "../screens/download_app/DownloadApp.screen";
 import PokemonSwiper from "../screens/pokemon/PokemonSwiper.screen";
 import PortfolioScreen from "../screens/portfolio/PortfolioScreen.screen";
 import WorkExperienceScreen from "../screens/work_experience/WorkExperience.screen";
+import { ColorTheme, useTheme } from "../theme/Theme.interface";
 import TabNavigatorMobile from "./TabNavigatorMobile";
 
 const MENU_ITEMS = [
@@ -36,10 +37,13 @@ const RenderContent = ({ tab }: { tab: number }) => {
 };
 
 const TabNavigator = () => {
+  const theme = useTheme();
+  const styles = createStyles(theme);
+
   const [currentTab, setCurrentTab] = useState<number>(0);
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={styles.appbar}>
       <Toolbar>
         {MENU_ITEMS.map((page, index) => {
           const selected = index === currentTab;
@@ -62,6 +66,15 @@ const TabNavigator = () => {
       <RenderContent tab={currentTab} />
     </AppBar>
   );
+};
+
+const createStyles = (theme: ColorTheme) => {
+  const styles = {
+    appbar: {
+      backgroundColor: theme.navigationBackground,
+    },
+  };
+  return styles;
 };
 
 export default TabNavigator;
