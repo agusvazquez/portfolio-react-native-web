@@ -8,7 +8,12 @@ import TabNavigatorMobile from "./TabNavigatorMobile";
 
 export default function Navigation() {
   return (
-    <NavigationContainer linking={LinkingConfiguration}>
+    <NavigationContainer
+      documentTitle={{
+        formatter: (options, route) => "Agustin Vazquez",
+      }}
+      linking={LinkingConfiguration}
+    >
       <RootNavigator />
     </NavigationContainer>
   );
