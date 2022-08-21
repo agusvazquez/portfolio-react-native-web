@@ -10,9 +10,14 @@ export default {
   prefixes: [Linking.makeUrl("/")],
   config: {
     screens: {
-      Root: {
+      TabNavigator: {
         screens: {
-          Pokemon: {
+          "About Me": {
+            screens: {
+              AboutMeScreen: "about_me",
+            },
+          },
+          Animations: {
             screens: {
               PokemonSwiper: "pokemon_swiper",
             },
@@ -20,6 +25,11 @@ export default {
           Portfolio: {
             screens: {
               PortfolioScreen: "portfolio",
+            },
+          },
+          "Work Experience": {
+            screens: {
+              WorkExperienceScreen: "work_experience",
             },
           },
         },

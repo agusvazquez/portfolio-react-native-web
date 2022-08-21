@@ -1,5 +1,13 @@
 import React from "react";
-import { StyleSheet, ScrollView, Text, View, TouchableOpacity, Linking, Image } from "react-native";
+import {
+  StyleSheet,
+  ScrollView,
+  Text,
+  View,
+  TouchableOpacity,
+  Linking,
+  Image,
+} from "react-native";
 import { Avatar, Badge, Button } from "react-native-elements";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -30,34 +38,34 @@ const AboutMeScreen = () => {
     languages,
     platforms,
     resumeUrl,
-    sourceCode
+    sourceCode,
   } = DATA;
 
-  
-
-  const SocialIcon = ({item} : SocialIconProps) => {
+  const SocialIcon = ({ item }: SocialIconProps) => {
     const { name, icon, url } = item;
-    return <TouchableOpacity onPress={() => Linking.openURL(url)}>
-        {name == 'Toptal' ? 
-        <Image  style={styles.iconToptal} source={{uri: icon}} /> : 
-        <Ionicons size={ICON_SIZE}
-          color={theme.primary}
-          name={icon}/> }
+    return (
+      <TouchableOpacity onPress={() => Linking.openURL(url)}>
+        {name == "Toptal" ? (
+          <Image style={styles.iconToptal} source={{ uri: icon }} />
+        ) : (
+          <Ionicons size={ICON_SIZE} color={theme.primary} name={icon} />
+        )}
       </TouchableOpacity>
-  }
+    );
+  };
 
-  const PlatformView = ({name, icon}) => {
-    return <View style={styles.containerPlatform}>
-      <Image style={styles.iconPlatform} source={{uri: icon}} />
-      <Text style={styles.textPlatform}>{name}</Text>
-    </View>
-  }
-
+  const PlatformView = ({ name, icon }) => {
+    return (
+      <View style={styles.containerPlatform}>
+        <Image style={styles.iconPlatform} source={{ uri: icon }} />
+        <Text style={styles.textPlatform}>{name}</Text>
+      </View>
+    );
+  };
 
   return (
     <Background>
       <ScrollView style={styles.container}>
-        
         <Avatar
           rounded
           size="xlarge"
@@ -67,29 +75,30 @@ const AboutMeScreen = () => {
           }}
         />
 
-        <Text style={styles.textRole}>{role}</Text> 
+        <Text style={styles.textRole}>{role}</Text>
         <Text style={styles.textName}>{name}</Text>
-        
-        <TouchableOpacity onPress={() => Linking.openURL('mailto:' + email)}>
+
+        <TouchableOpacity onPress={() => Linking.openURL("mailto:" + email)}>
           <Text style={styles.textEmail}>{email}</Text>
         </TouchableOpacity>
         <Text style={styles.textHeadline}>{headline}</Text>
 
         <View style={styles.containerSocial}>
-        {social.map((item) => {
-            return <SocialIcon key={"social_" + item.name} item={item}/>
-        })}
+          {social.map((item) => {
+            return <SocialIcon key={"social_" + item.name} item={item} />;
+          })}
         </View>
 
         <Text style={styles.text}>{about_me}</Text>
 
-
         <Text style={styles.textHeader}>Platforms</Text>
         <View style={styles.containerPlatforms}>
-        {platforms.map((item, index) => {
-          const {name, icon} = item;
-          return <PlatformView key={"platform_" + index} name={name} icon={icon} />
-        })}
+          {platforms.map((item, index) => {
+            const { name, icon } = item;
+            return (
+              <PlatformView key={"platform_" + index} name={name} icon={icon} />
+            );
+          })}
         </View>
 
         <Text style={styles.textHeader}>Libraries</Text>
@@ -114,20 +123,23 @@ const AboutMeScreen = () => {
           })}
         </View>
 
-        <Button 
-          containerStyle={styles.buttonContainer} 
+        <Button
+          containerStyle={styles.buttonContainer}
           buttonStyle={styles.button}
-          titleStyle={styles.buttonTitle} 
-          title="Source Code" 
-          onPress={() => Linking.openURL(sourceCode)} />
+          titleStyle={styles.buttonTitle}
+          title="Source Code"
+          onPress={() => Linking.openURL(sourceCode)}
+        />
 
-        <Button 
-          containerStyle={styles.buttonContainer} 
+        <Button
+          containerStyle={styles.buttonContainer}
           buttonStyle={styles.button}
-          titleStyle={styles.buttonTitle}  
-          title="Download CV" onPress={() => Linking.openURL(resumeUrl)}/>
+          titleStyle={styles.buttonTitle}
+          title="Download CV"
+          onPress={() => Linking.openURL(resumeUrl)}
+        />
 
-        <View style={{height:10}}/>
+        <View style={{ height: 10 }} />
       </ScrollView>
     </Background>
   );
@@ -136,14 +148,15 @@ const AboutMeScreen = () => {
 const ICON_SIZE = 32;
 
 const ICON_STYLE = {
-  width: ICON_SIZE, 
+  width: ICON_SIZE,
   height: ICON_SIZE,
-  resizeMode: 'contain',
-}
+  resizeMode: "contain",
+};
 
 const createStyles = (theme: ColorTheme) => {
   const styles = StyleSheet.create({
     container: {
+      flexGrow: 1,
       marginHorizontal: 10,
     },
     avatar: {
@@ -151,52 +164,51 @@ const createStyles = (theme: ColorTheme) => {
       alignSelf: "center",
     },
     containerPlatforms: {
-      flexDirection:'row',
-      alignItems: 'center',
-      justifyContent: 'space-evenly',
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-evenly",
       marginVertical: 10,
     },
     containerPlatform: {
-      alignItems: 'center',
-      justifyContent: 'center'
+      alignItems: "center",
+      justifyContent: "center",
     },
     containerSocial: {
       width: 300,
-      alignSelf: 'center',
-      flexDirection:'row',
-      alignItems: 'center',
-      justifyContent: 'space-evenly',
+      alignSelf: "center",
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-evenly",
       marginVertical: 10,
     },
-    
+
     iconToptal: {
       ...ICON_STYLE,
-      tintColor: theme.primary, 
-      
+      tintColor: theme.primary,
     },
     iconPlatform: {
       ...ICON_STYLE,
-      tintColor: theme.tint, 
+      tintColor: theme.tint,
     },
     text: {
       color: theme.primary,
-      fontFamily: Fonts.regular
+      fontFamily: Fonts.regular,
     },
     textPlatform: {
       color: theme.tint,
-      fontFamily: Fonts.regular
+      fontFamily: Fonts.regular,
     },
-    textRole: {
+    textRole: {
       color: theme.primary,
       fontFamily: Fonts.bold,
       fontSize: 30,
-      alignSelf: 'center'
+      alignSelf: "center",
     },
-    textName: {
+    textName: {
       color: theme.primary,
       fontFamily: Fonts.bold,
       fontSize: 24,
-      alignSelf: 'center'
+      alignSelf: "center",
     },
     textHeader: {
       color: theme.primary,
@@ -207,14 +219,14 @@ const createStyles = (theme: ColorTheme) => {
     textEmail: {
       color: theme.primary,
       fontFamily: Fonts.regular,
-      alignSelf: 'center'
+      alignSelf: "center",
     },
     textHeadline: {
       color: theme.primary,
       fontFamily: Fonts.bold,
-      textAlign: 'center',
+      textAlign: "center",
       marginTop: 10,
-      marginHorizontal: 20
+      marginHorizontal: 20,
     },
     badgeContainer: {
       flexDirection: "row",
@@ -228,17 +240,17 @@ const createStyles = (theme: ColorTheme) => {
       borderColor: theme.surface,
       marginHorizontal: 5,
       margin: 1,
-      backgroundColor: theme.tint
+      backgroundColor: theme.tint,
     },
     buttonContainer: {
       margin: 10,
     },
     button: {
-      backgroundColor: theme.tint
+      backgroundColor: theme.tint,
     },
     buttonTitle: {
       fontFamily: Fonts.bold,
-    }
+    },
   });
   return styles;
 };

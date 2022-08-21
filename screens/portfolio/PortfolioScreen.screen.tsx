@@ -2,15 +2,20 @@ import React from "react";
 import { StyleSheet, FlatList, Platform, Linking, View } from "react-native";
 
 import { Background } from "../../components/ui.component";
+import useMobile from "../../hooks/useMobile";
 
 import portfolioData from "../../json/portfolio.json";
 import { ColorTheme, useTheme } from "../../theme/Theme.interface";
 import { PortfolioItemType } from "../../types";
-import PortfolioItem from "./PortfolioItem.screen";
+import PortfolioItem from "./PortfolioItem.component";
 
 export default function PortfolioScreen() {
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
+
+  //TODO: Improve to use screen width
+  const isMobile = useMobile();
+  const COLUMN_COUNT = isMobile ? 2 : 5;
 
   const onItemPressed = (item: PortfolioItemType) => {
     switch (Platform.OS) {
@@ -52,7 +57,6 @@ export default function PortfolioScreen() {
   );
 }
 
-const COLUMN_COUNT = 2;
 const MARGIN = 10;
 
 const createStyles = (theme: ColorTheme) => {
