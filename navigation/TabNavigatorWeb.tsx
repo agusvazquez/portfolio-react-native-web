@@ -8,7 +8,7 @@ import DownloadApp from "../screens/download_app/DownloadApp.screen";
 import PokemonSwiper from "../screens/pokemon/PokemonSwiper.screen";
 import PortfolioScreen from "../screens/portfolio/PortfolioScreen.screen";
 import WorkExperienceScreen from "../screens/work_experience/WorkExperience.screen";
-import TabNavigatorMobile from "./TabNavigator.mobile";
+import TabNavigatorMobile from "./TabNavigatorMobile";
 
 const MENU_ITEMS = [
   "About Me",

@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 
 const useWindowSize = () => {
   const [currentWindow, setWindow] = useState(window);
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateSize() {
       setWindow(window);
     }

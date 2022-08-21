@@ -21,7 +21,6 @@ export default function PortfolioScreen() {
   const theme = useTheme();
   const styles = React.useMemo(() => createStyles(theme), [theme]);
 
-  //TODO: Improve to use screen width
   const window = useWindow();
   const COLUMN_COUNT = Math.round(window.innerWidth / 200);
 

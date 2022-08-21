@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 import useMobile from "../hooks/useMobile";
-import TabNavigatorMobile from "./TabNavigator.mobile";
-import TabNavigatorWeb from "./TabNavigator.web";
+import TabNavigatorMobile from "./TabNavigatorMobile";
+import TabNavigatorWeb from "./TabNavigatorWeb";
 
 const TabNavigator = () => {
   const isMobile = useMobile();
