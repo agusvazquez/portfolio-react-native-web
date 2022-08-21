@@ -1,8 +1,16 @@
 import React from "react";
-import { StyleSheet, FlatList, Platform, Linking, View } from "react-native";
+import {
+  StyleSheet,
+  FlatList,
+  Platform,
+  Linking,
+  View,
+  Text,
+} from "react-native";
 
 import { Background } from "../../components/ui.component";
 import useMobile from "../../hooks/useMobile";
+import useWindow from "../../hooks/useWindow";
 
 import portfolioData from "../../json/portfolio.json";
 import { ColorTheme, useTheme } from "../../theme/Theme.interface";
@@ -14,8 +22,8 @@ export default function PortfolioScreen() {
   const styles = React.useMemo(() => createStyles(theme), [theme]);
 
   //TODO: Improve to use screen width
-  const isMobile = useMobile();
-  const COLUMN_COUNT = isMobile ? 2 : 5;
+  const window = useWindow();
+  const COLUMN_COUNT = Math.round(window.innerWidth / 200);
 
   const onItemPressed = (item: PortfolioItemType) => {
     switch (Platform.OS) {

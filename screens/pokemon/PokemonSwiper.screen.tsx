@@ -1,6 +1,6 @@
 import { ApiResponse } from "apisauce";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View, Text, Linking } from "react-native";
+import { StyleSheet, View, Text, Linking, Platform } from "react-native";
 import { Card, Button } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 
@@ -61,10 +61,15 @@ export default function PokemonSwiper() {
 
     const upperCasedName = name.charAt(0).toUpperCase() + name.slice(1);
 
+    const titleStyle =
+      Platform.OS === "web"
+        ? { ...styles.title, userSelect: "none" }
+        : styles.title;
+
     return (
       <Card containerStyle={styles.card}>
         <Card.Image style={{ resizeMode: "contain" }} source={{ uri }} />
-        <Card.Title h4Style={styles.title} h4>
+        <Card.Title h4Style={titleStyle} h4>
           {upperCasedName}
         </Card.Title>
         <Card.Divider />
@@ -128,7 +133,6 @@ const createStyles = (theme: ColorTheme) => {
       fontFamily: Fonts.bold,
       fontWeight: "normal",
       color: "black",
-      userSelect: "none",
     },
     button: {
       backgroundColor: theme.tint,

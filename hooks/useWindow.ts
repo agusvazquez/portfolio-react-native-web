@@ -1,19 +1,11 @@
-import { useEffect, useState } from "react";
+import { Dimensions } from "react-native";
 
 const useWindow = () => {
-  const [currentWindow, setWindow] = useState<Window>(window);
-
-  function handleWindowSizeChange() {
-    setWindow(window);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  return currentWindow;
+  const window = Dimensions.get("window");
+  return {
+    innerHeight: window.height,
+    innerWidth: window.width,
+  };
 };
 
 export default useWindow;
