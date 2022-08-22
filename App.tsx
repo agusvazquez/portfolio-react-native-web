@@ -9,6 +9,7 @@ import {
 } from "@expo-google-fonts/roboto";
 
 import Navigation from "./navigation";
+import { ActivityIndicator } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -22,11 +23,9 @@ export default function App() {
     if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded]);
 
-  if (!fontsLoaded) return null;
-
   return (
     <SafeAreaProvider>
-      <Navigation />
+      {fontsLoaded ? <Navigation /> : <ActivityIndicator />}
       <StatusBar />
     </SafeAreaProvider>
   );
