@@ -1,8 +1,7 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import { View, StyleSheet, Text, Image, ScrollView } from "react-native";
 import { ColorTheme, useTheme } from "../../theme/Theme.interface";
 import { Background } from "../../components/ui.component";
-import { ScrollView } from "react-native-gesture-handler";
 
 const QR_PLAYSTORE =
   "https://portfolio.agustinvazquez.com/expo/expo_playstore.png";

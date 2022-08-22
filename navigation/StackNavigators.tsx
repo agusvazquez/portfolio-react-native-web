@@ -1,5 +1,4 @@
 import React from "react";
-import { useTheme } from "@emotion/react";
 import { createStackNavigator } from "@react-navigation/stack";
 import PokemonSwiper from "../screens/pokemon/PokemonSwiper.screen";
 import DownloadApp from "../screens/download_app/DownloadApp.screen";
@@ -7,7 +6,7 @@ import AboutMeScreen from "../screens/about_me/AboutMe.screen";
 import WorkExperienceScreen from "../screens/work_experience/WorkExperience.screen";
 import PortfolioScreen from "../screens/portfolio/PortfolioScreen.screen";
 import Fonts from "../constants/fonts";
-import { ColorTheme } from "../theme/Theme.interface";
+import { ColorTheme, useTheme } from "../theme/Theme.interface";
 import useMobile from "../hooks/useMobile";
 
 const Stack = createStackNavigator();
