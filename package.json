@@ -5,8 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build:expo": "expo export --public-url https://sample.agustinvazquez.com/expo",
-    "build:web": "expo build:web",
+    "build:expo": "npx expo export",
+    "build:web": "npx expo export:web",
     "eject": "expo eject",
     "test": "jest --watchAll"
   },
