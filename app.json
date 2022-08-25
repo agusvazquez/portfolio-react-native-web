@@ -27,7 +27,18 @@
       "package": "com.agusvazquezdealermade.PortfolioApp"
     },
     "web": {
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyDCLfB6XQTYTeotVRFziRR6d5JzZeVR8NA",
+          "authDomain": "sample-project-4fe08.firebaseapp.com",
+          "projectId": "sample-project-4fe08",
+          "storageBucket": "sample-project-4fe08.appspot.com",
+          "messagingSenderId": "379027892611",
+          "appId": "1:379027892611:web:51a9f751b117f15a03aeb6",
+          "measurementId": "G-1WW4KC0530"
+        }
+      }
     }
   }
 }
