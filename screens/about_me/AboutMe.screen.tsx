@@ -214,7 +214,7 @@ const createStyles = (theme: ColorTheme) => {
       fontFamily: Fonts.regular,
     },
     textPlatform: {
-      color: theme.tint,
+      color: theme.onSurface,
       fontFamily: Fonts.regular,
       marginTop: 5,
     },
@@ -254,12 +254,12 @@ const createStyles = (theme: ColorTheme) => {
       marginBottom: 10,
     },
     badge: {
-      height: 24,
-      borderRadius: 12,
+      height: 34,
+      borderRadius: 17,
       borderWidth: 0,
       borderColor: theme.surface,
-      marginHorizontal: 5,
-      margin: 1,
+      margin: 5,
+      padding: 5,
       backgroundColor: theme.tint,
     },
     buttonContainer: {
