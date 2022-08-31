@@ -7,11 +7,6 @@
   "sourceCode": "https://github.com/agusvazquez/PortfolioApp",
   "social": [
     {
-      "name": "Toptal",
-      "icon": "https://portfolio.agustinvazquez.com/assets/icons/toptal.png",
-      "url": "https://www.toptal.com/resume/agustin-vazquez"
-    },
-    {
       "name": "Github",
       "icon": "logo-github",
       "url": "https://github.com/agusvazquez"
