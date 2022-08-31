@@ -165,7 +165,7 @@ const AboutMeScreen = () => {
   );
 };
 
-const ICON_SIZE = 32;
+const ICON_SIZE = 40;
 
 const ICON_STYLE = {
   width: ICON_SIZE,
