@@ -257,7 +257,6 @@ const createStyles = (theme: ColorTheme) => {
       height: 34,
       borderRadius: 17,
       borderWidth: 0,
-      borderColor: theme.surface,
       margin: 5,
       padding: 5,
       backgroundColor: theme.tint,
