@@ -37,6 +37,7 @@ const AboutMeScreen = () => {
     libraries,
     languages,
     platforms,
+    certifications,
     resumeUrl,
     sourceCode,
   } = DATA;
@@ -54,12 +55,16 @@ const AboutMeScreen = () => {
     );
   };
 
-  const PlatformView = ({ name, icon }) => {
+  const PlatformView = ({ name, icon, url }) => {
     return (
-      <View style={styles.containerPlatform}>
+      <TouchableOpacity
+        style={styles.containerPlatform}
+        disabled={url == undefined}
+        onPress={() => Linking.openURL(url)}
+      >
         <Image style={styles.iconPlatform} source={{ uri: icon }} />
         <Text style={styles.textPlatform}>{name}</Text>
-      </View>
+      </TouchableOpacity>
     );
   };
 
@@ -97,6 +102,21 @@ const AboutMeScreen = () => {
             const { name, icon } = item;
             return (
               <PlatformView key={"platform_" + index} name={name} icon={icon} />
+            );
+          })}
+        </View>
+
+        <Text style={styles.textHeader}>Certifications</Text>
+        <View style={styles.containerPlatforms}>
+          {certifications.map((item, index) => {
+            const { name, icon, url } = item;
+            return (
+              <PlatformView
+                key={"certification_" + index}
+                name={name}
+                icon={icon}
+                url={url}
+              />
             );
           })}
         </View>
@@ -188,7 +208,6 @@ const createStyles = (theme: ColorTheme) => {
     },
     iconPlatform: {
       ...ICON_STYLE,
-      tintColor: theme.tint,
     },
     text: {
       color: theme.primary,
@@ -197,6 +216,7 @@ const createStyles = (theme: ColorTheme) => {
     textPlatform: {
       color: theme.tint,
       fontFamily: Fonts.regular,
+      marginTop: 5,
     },
     textRole: {
       color: theme.primary,

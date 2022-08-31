@@ -55,6 +55,28 @@
       "icon": "https://portfolio.agustinvazquez.com/assets/icons/aws.png"
     }
   ],
+  "certifications": [
+    {
+      "name": "Toptal Developer",
+      "icon": "https://portfolio.agustinvazquez.com/assets/certifications/toptal.png",
+      "url": "https://www.toptal.com/resume/agustin-vazquez"
+    },
+    {
+      "name": "G2i Developer",
+      "icon": "https://portfolio.agustinvazquez.com/assets/certifications/g2i.png",
+      "url": "https://developer.g2i.co/developer/Agustin-Vazquez/db7abeb2-35a1-4645-94ba-c2d323a02f63"
+    },
+    {
+      "name": "Arc Developer",
+      "icon": "https://portfolio.agustinvazquez.com/assets/certifications/arc.png",
+      "url": "https://arc.dev/@agustinvazquez209z"
+    },
+    {
+      "name": "Project Management Expert",
+      "icon": "https://portfolio.agustinvazquez.com/assets/certifications/utn.png",
+      "url": "https://www.dropbox.com/s/140p14koz88roq1/Project%20Management.pdf"
+    }
+  ],
   "libraries": [
     "In App Purchases",
     "Google Pay",

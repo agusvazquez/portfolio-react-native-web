@@ -8,6 +8,8 @@ import Fonts from "../constants/fonts";
 import { ColorTheme, useTheme } from "../theme/Theme.interface";
 import StackNavigators from "./StackNavigators";
 import { createStackNavigator } from "@react-navigation/stack";
+import AlertModal from "../components/Alert.modal";
+import LocalizedStrings from "../localization/LocalizedStrings";
 
 const MENU_ITEMS = [
   "About Me",
@@ -70,6 +72,7 @@ const TabNavigator = () => {
   const styles = createStyles(theme);
 
   const [currentTab, setCurrentTab] = useState<number>(0);
+  const [isModalVisible, setModalVisible] = useState<boolean>(true);
 
   return (
     <View style={styles.container}>
@@ -92,6 +95,13 @@ const TabNavigator = () => {
             );
           })}
         </Toolbar>
+
+        <AlertModal
+          isVisible={isModalVisible}
+          handleModalClose={() => setModalVisible(false)}
+          title={LocalizedStrings.desktopModal.title}
+          message={LocalizedStrings.desktopModal.message}
+        />
       </AppBar>
 
       <RenderContent tab={currentTab} />

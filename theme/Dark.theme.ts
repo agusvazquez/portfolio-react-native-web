@@ -3,8 +3,8 @@ import { ColorTheme } from "./Theme.interface";
 export const DarkColorTheme: ColorTheme = {
   primary: "#ffffff",
   tint: "#3d8cdb",
-  surface: "#888888",
+  surface: "#272727",
   onSurface: "white",
-  background: "black",
+  background: "#121212",
   navigationBackground: "#222222",
 };
