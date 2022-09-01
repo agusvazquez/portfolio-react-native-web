@@ -87,7 +87,6 @@ const TabNavigator = ({ initialState }) => {
   useEffect(() => {
     const FIRST_TIME_KEY = "is_first_time";
     AsyncStorage.getItem(FIRST_TIME_KEY).then((item) => {
-      console.log(item);
       if (item === null) {
         setModalVisible(true);
         AsyncStorage.setItem(FIRST_TIME_KEY, "true");

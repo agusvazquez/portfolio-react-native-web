@@ -21,15 +21,13 @@ export default function Navigation() {
   const [initialState, setInitialState] = useState<any>();
 
   useEffect(() => {
-    getInitialState()
-      .then((state) => {
-        if (state !== undefined) {
-          setInitialState(state);
-        }
+    getInitialState().then((state) => {
+      if (state !== undefined) {
+        setInitialState(state);
+      }
 
-        setIsReady(true);
-      })
-      .catch((error) => console.log(error));
+      setIsReady(true);
+    });
   }, [getInitialState]);
 
   if (!isReady) {
@@ -48,7 +46,9 @@ export default function Navigation() {
         const tabRoute = getActiveRouteState(state);
         const currentRoute = getFocusedRouteNameFromRoute(tabRoute);
 
-        Analytics.logEvent(currentRoute || tabRoute.name);
+        Analytics.logEvent(currentRoute || tabRoute.name).catch((error) =>
+          console.log(error)
+        );
       }}
     >
       <RootNavigator initialState={initialState} />
