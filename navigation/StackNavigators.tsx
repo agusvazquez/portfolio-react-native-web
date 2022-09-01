@@ -88,7 +88,7 @@ function DownloadAppstackNavigator() {
   return (
     <Stack.Navigator screenOptions={styles.navOptions}>
       <Stack.Screen
-        name="DownloadApp"
+        name="Download App"
         component={DownloadApp}
         options={{ headerTitle: "Download App", headerShown }}
       />

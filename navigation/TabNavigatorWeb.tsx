@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 
 import { AppBar, Button, Toolbar } from "@mui/material";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import Fonts from "../constants/fonts";
 
@@ -58,7 +59,7 @@ const RenderContent = ({ tab }: { tab: number }) => {
 
       {tab === 4 && (
         <Stack.Screen
-          name="DownloadApp"
+          name="Download App"
           component={StackNavigators.DownloadAppstackNavigator}
           options={{ headerShown: false }}
         />
@@ -67,12 +68,32 @@ const RenderContent = ({ tab }: { tab: number }) => {
   );
 };
 
-const TabNavigator = () => {
+const TabNavigator = ({ initialState }) => {
   const theme = useTheme();
   const styles = createStyles(theme);
 
+  if (initialState != null) console.log();
+
   const [currentTab, setCurrentTab] = useState<number>(0);
-  const [isModalVisible, setModalVisible] = useState<boolean>(true);
+  const [isModalVisible, setModalVisible] = useState<boolean>(false);
+  useEffect(() => {
+    if (initialState === undefined) return;
+
+    setCurrentTab(
+      MENU_ITEMS.findIndex((item) => item === initialState.routes[0].name)
+    );
+  }, [initialState]);
+
+  useEffect(() => {
+    const FIRST_TIME_KEY = "is_first_time";
+    AsyncStorage.getItem(FIRST_TIME_KEY).then((item) => {
+      console.log(item);
+      if (item === null) {
+        setModalVisible(true);
+        AsyncStorage.setItem(FIRST_TIME_KEY, "true");
+      }
+    });
+  }, []);
 
   return (
     <View style={styles.container}>

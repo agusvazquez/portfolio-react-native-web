@@ -30,9 +30,9 @@ export default {
           WorkExperienceScreen: "work_experience",
         },
       },
-      DownloadApp: {
+      "Download App": {
         screens: {
-          DownloadApp: "download",
+          "Download App": "download",
         },
       },
     },

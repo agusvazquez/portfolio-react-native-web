@@ -6,7 +6,7 @@
     "url_web": "https://fetch.ai/",
     "url_android": "https://play.google.com/store/apps/details?id=com.fetchai",
     "url_ios": "https://apps.apple.com/us/app/fetch-ai/id1613536557",
-    "tintColor": "lightgray",
+    "tintColor": "white",
     "platforms": ["react_native", "ios", "android"],
     "lastWork": "Present"
   },
@@ -133,7 +133,7 @@
     "lastWork": "2017"
   },
   {
-    "name": "Soy Vecino",
+    "name": "",
     "description": "Test",
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/soyvecino.png",
     "url_web": "https://toyboywarehouse.com/",
@@ -144,7 +144,7 @@
     "lastWork": "2016"
   },
   {
-    "name": "Movilidad Segura",
+    "name": "",
     "description": "Test",
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/movilidadsegura.png",
     "url_web": null,
