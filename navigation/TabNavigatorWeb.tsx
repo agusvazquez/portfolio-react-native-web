@@ -11,6 +11,7 @@ import StackNavigators from "./StackNavigators";
 import { createStackNavigator } from "@react-navigation/stack";
 import AlertModal from "../components/Alert.modal";
 import LocalizedStrings from "../localization/LocalizedStrings";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 const MENU_ITEMS = [
   "About Me",
@@ -22,67 +23,49 @@ const MENU_ITEMS = [
 
 const Stack = createStackNavigator();
 
-const RenderContent = ({ tab }: { tab: number }) => {
+const RenderContent = () => {
   return (
     <Stack.Navigator defaultScreenOptions={{ headerShown: false }}>
-      {tab === 0 && (
-        <Stack.Screen
-          name="About Me"
-          component={StackNavigators.AboutMeStackNavigator}
-          options={{ headerShown: false }}
-        />
-      )}
+      <Stack.Screen
+        name="About Me"
+        component={StackNavigators.AboutMeStackNavigator}
+        options={{ headerShown: false }}
+      />
 
-      {tab === 1 && (
-        <Stack.Screen
-          name="Animations"
-          component={StackNavigators.PokemonNavigator}
-          options={{ headerShown: false }}
-        />
-      )}
+      <Stack.Screen
+        name="Animations"
+        component={StackNavigators.PokemonNavigator}
+        options={{ headerShown: false }}
+      />
 
-      {tab === 2 && (
-        <Stack.Screen
-          name="Portfolio"
-          component={StackNavigators.PortfolioNavigator}
-          options={{ headerShown: false }}
-        />
-      )}
+      <Stack.Screen
+        name="Portfolio"
+        component={StackNavigators.PortfolioNavigator}
+        options={{ headerShown: false }}
+      />
 
-      {tab === 3 && (
-        <Stack.Screen
-          name="Work Experience"
-          component={StackNavigators.WorkExperienceNavigator}
-          options={{ headerShown: false }}
-        />
-      )}
+      <Stack.Screen
+        name="Work Experience"
+        component={StackNavigators.WorkExperienceNavigator}
+        options={{ headerShown: false }}
+      />
 
-      {tab === 4 && (
-        <Stack.Screen
-          name="Download App"
-          component={StackNavigators.DownloadAppstackNavigator}
-          options={{ headerShown: false }}
-        />
-      )}
+      <Stack.Screen
+        name="Download App"
+        component={StackNavigators.DownloadAppstackNavigator}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };
 
-const TabNavigator = ({ initialState }) => {
+const TabNavigator = () => {
   const theme = useTheme();
   const styles = createStyles(theme);
-
-  if (initialState != null) console.log();
+  const navigation = useNavigation();
 
   const [currentTab, setCurrentTab] = useState<number>(0);
   const [isModalVisible, setModalVisible] = useState<boolean>(false);
-  useEffect(() => {
-    if (initialState === undefined) return;
-
-    setCurrentTab(
-      MENU_ITEMS.findIndex((item) => item === initialState.routes[0].name)
-    );
-  }, [initialState]);
 
   useEffect(() => {
     const FIRST_TIME_KEY = "is_first_time";
@@ -92,6 +75,9 @@ const TabNavigator = ({ initialState }) => {
         AsyncStorage.setItem(FIRST_TIME_KEY, "true");
       }
     });
+
+    const initialRouteName = navigation.getState().routes[0].name;
+    setCurrentTab(MENU_ITEMS.findIndex((item) => item === initialRouteName));
   }, []);
 
   return (
@@ -103,7 +89,10 @@ const TabNavigator = ({ initialState }) => {
             return (
               <Button
                 key={page}
-                onClick={() => setCurrentTab(index)}
+                onClick={() => {
+                  setCurrentTab(index);
+                  navigation.navigate(MENU_ITEMS[index]);
+                }}
                 sx={{
                   color: "white",
                   fontFamily: selected ? Fonts.bold : Fonts.regular,

@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import {
   NavigationContainer,
   getFocusedRouteNameFromRoute,
-  useLinking,
+  NavigationState,
 } from "@react-navigation/native";
 
 import * as Analytics from "expo-firebase-analytics";
@@ -14,33 +14,13 @@ import TabNavigatorMobile from "./TabNavigatorMobile";
 import { ActivityIndicator } from "react-native";
 
 export default function Navigation() {
-  const ref = useRef();
-  const { getInitialState } = useLinking(ref, LinkingConfiguration);
-
-  const [isReady, setIsReady] = useState<boolean>(false);
-  const [initialState, setInitialState] = useState<any>();
-
-  useEffect(() => {
-    getInitialState().then((state) => {
-      if (state !== undefined) {
-        setInitialState(state);
-      }
-
-      setIsReady(true);
-    });
-  }, [getInitialState]);
-
-  if (!isReady) {
-    return <ActivityIndicator />;
-  }
-
   return (
     <NavigationContainer
       documentTitle={{
         formatter: (options, route) => "Agustin Vazquez",
       }}
-      initialState={initialState}
-      ref={ref}
+      linking={LinkingConfiguration}
+      fallback={<ActivityIndicator />}
       onStateChange={(state) => {
         if (state === null || state === undefined) return;
         const tabRoute = getActiveRouteState(state);
@@ -51,7 +31,7 @@ export default function Navigation() {
         );
       }}
     >
-      <RootNavigator initialState={initialState} />
+      <RootNavigator />
     </NavigationContainer>
   );
 }
@@ -70,11 +50,11 @@ const getActiveRouteState = function (route: NavigationState): NavigationState {
   return result;
 };
 
-function RootNavigator({ initialState }) {
+function RootNavigator() {
   const isMobilePhone = useMobile();
   if (isMobilePhone) {
     return <TabNavigatorMobile />;
   } else {
-    return <TabNavigatorWeb initialState={initialState} />;
+    return <TabNavigatorWeb />;
   }
 }

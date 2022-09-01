@@ -190,6 +190,7 @@ const createStyles = (theme: ColorTheme) => {
       marginVertical: 10,
     },
     containerPlatform: {
+      width: 80,
       alignItems: "center",
       justifyContent: "center",
     },

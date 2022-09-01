@@ -12,7 +12,7 @@ export default function TabNavigator() {
   const styles = React.useMemo(() => createStyles(theme), [theme]);
 
   return (
-    <BottomTab.Navigator tabBarOptions={styles.barOptions}>
+    <BottomTab.Navigator screenOptions={styles.barOptions}>
       <BottomTab.Screen
         name="About Me"
         component={StackNavigators.AboutMeStackNavigator}
@@ -59,11 +59,12 @@ function TabBarIcon(props: {
 const createStyles = (theme: ColorTheme) => {
   const styles = {
     barOptions: {
-      activeTintColor: theme.onSurface,
-      inactiveTintColor: theme.surface,
-      style: {
+      tabBarActiveTintColor: theme.onSurface,
+      tabBarInactiveTintColor: theme.surface,
+      tabBarStyle: {
         backgroundColor: theme.navigationBackground,
       },
+      headerShown: false,
     },
   };
   return styles;
