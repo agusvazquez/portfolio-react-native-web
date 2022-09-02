@@ -76,8 +76,11 @@ const TabNavigator = () => {
       }
     });
 
-    const initialRouteName = navigation.getState().routes[0].name;
-    setCurrentTab(MENU_ITEMS.findIndex((item) => item === initialRouteName));
+    const navigationState = navigation.getState();
+    if (navigationState != undefined) {
+      const initialRouteName = navigationState.routes[0].name;
+      setCurrentTab(MENU_ITEMS.findIndex((item) => item === initialRouteName));
+    }
   }, []);
 
   return (
