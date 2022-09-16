@@ -106,7 +106,7 @@ const AboutMeScreen = () => {
           })}
         </View>
 
-        <Text style={styles.textHeader}>Certifications</Text>
+        <Text style={styles.textHeader}>Freelance Networks</Text>
         <View style={styles.containerPlatforms}>
           {certifications.map((item, index) => {
             const { name, icon, url } = item;

@@ -29,7 +29,7 @@
     "expo": "^46.0.0",
     "expo-asset": "~8.6.1",
     "expo-constants": "~13.2.3",
-    "expo-firebase-analytics": "~7.1.1",
+    "expo-firebase-analytics": "~7.2.0",
     "expo-font": "~10.2.0",
     "expo-linking": "~3.2.2",
     "expo-splash-screen": "~0.16.1",
