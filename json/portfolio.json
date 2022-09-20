@@ -59,45 +59,5 @@
     "tintColor": "white",
     "platforms": ["react_native", "ios", "android"],
     "lastWork": "2019"
-  },
-  {
-    "name": "Energy Safe",
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/energysafe.png",
-    "url_web": null,
-    "url_android": "https://play.google.com/store/apps/details?id=com.nordica.energysafe",
-    "url_ios": "https://apps.apple.com/ar/app/energysafe/id1343313038",
-    "tintColor": "white",
-    "platforms": ["ios", "android"],
-    "lastWork": "2018"
-  },
-  {
-    "name": "Cambio Posadas",
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/cambioposadas.png",
-    "url_web": "https://cambioposadas.com.ar/",
-    "url_android": null,
-    "url_ios": null,
-    "tintColor": "white",
-    "platforms": ["react_native", "ios", "android"],
-    "lastWork": "2018"
-  },
-  {
-    "name": "Premedic",
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/premedic.png",
-    "url_web": null,
-    "url_android": "https://play.google.com/store/apps/details?id=com.paisanoscreando.premedic",
-    "url_ios": "https://apps.apple.com/ar/app/premedic-m%C3%B3vil/id1091291561",
-    "tintColor": "white",
-    "platforms": ["ios", "android"],
-    "lastWork": "2017"
-  },
-  {
-    "name": "Vea Mobile",
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/vea.png",
-    "url_web": null,
-    "url_android": "https://play.google.com/store/apps/details?id=com.paisanoscreando.vea",
-    "url_ios": null,
-    "tintColor": "white",
-    "platforms": ["android"],
-    "lastWork": "2017"
   }
 ]
