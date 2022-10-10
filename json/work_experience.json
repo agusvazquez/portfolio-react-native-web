@@ -1,6 +1,11 @@
 [
   {
-    "time": "Present",
+    "time": "2022",
+    "title": "HUB International (via Toptal)",
+    "description": "- Created a mobile app with website tools for employees. Learned to use AWS Cognito, Face ID and Multifactor Authentication.\n- Added push notifications, CodePush and Sentry for crash detection.\n- Added several apps with the same code source supporting different UI colors with Android Flavors and xCode Targets."
+  },
+  {
+    "time": "2022",
     "title": "Fetch AI (via Toptal)",
     "description": "- Developed an app that uses AI to learn from the user which will plan you holidays, arrange dinners, etc.\n- Added push notifications, social sign ins (Google, Apple), CodePush and Sentry for crash detection.\n- Created several screens and layouts for the mobile application.\n- Led a team of junior mobile developers which I supported for the success of the product. Reviewed pull requests daily.\n- Created Google Maps screens, Places API, Directions API and Geofencing. Calculated travel distance for each destination.\n- Developed a digital currency wallet screen that displayed the current balance.\n- Added a Chat feature using react native gifted chat for the front end, and Comet Chat for the engine."
   },

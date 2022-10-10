@@ -104,6 +104,9 @@
     "Native Modules",
     "Bridging",
     "Auth0",
+    "AWS Cognito",
+    "Face ID",
+    "Touch ID",
     "Sentry"
   ],
   "languages": ["Javascript", "Typescript", "Java", "Objective C", "Swift"],
