@@ -107,7 +107,9 @@
     "AWS Cognito",
     "Face ID",
     "Touch ID",
-    "Sentry"
+    "Sentry",
+    "Deep Linking",
+    "Universal Linking"
   ],
   "languages": ["Javascript", "Typescript", "Java", "Objective C", "Swift"],
   "headline": "I'm a Buenos Aires based React Native Developer. My personal goal is to improve the way of living of people by creating innovative mobile products.",

@@ -2,7 +2,7 @@
   {
     "time": "2022",
     "title": "HUB International (via Toptal)",
-    "description": "- Created a mobile app with website tools for employees. Learned to use AWS Cognito, Face ID and Multifactor Authentication.\n- Added push notifications, CodePush and Sentry for crash detection.\n- Added several apps with the same code source supporting different UI colors with Android Flavors and xCode Targets."
+    "description": "- Created a mobile app with website tools for employees. Learned to use AWS Cognito, Face ID and Multifactor Authentication.\n- Added push notifications, CodePush and Sentry for crash detection.\n- Added several apps with the same code source supporting different UI colors with Android Flavors and xCode Targets.\n- Universal Linking"
   },
   {
     "time": "2022",
