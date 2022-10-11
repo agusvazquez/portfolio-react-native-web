@@ -29,7 +29,7 @@
       "package": "com.agusvazquez.PortfolioApp"
     },
     "web": {
-      "favicon": "./assets/images/favicon.ico",
+      "favicon": "./assets/images/favicon.png",
       "config": {
         "firebase": {
           "apiKey": "AIzaSyDCLfB6XQTYTeotVRFziRR6d5JzZeVR8NA",
