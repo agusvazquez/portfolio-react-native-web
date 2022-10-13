@@ -8,6 +8,7 @@ export type PokemonListType = {
 
 export type PortfolioItemType = {
   name: string;
+  disabled: boolean;
   description: string;
   image: string;
   url_web: string;

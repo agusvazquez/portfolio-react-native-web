@@ -1,6 +1,29 @@
 [
   {
+    "name": "Finpath Wellness",
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/finpath.png",
+    "disabled": true,
+    "url_web": "https://www.finpathwellness.com/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.tcg.finpathwellness",
+    "url_ios": "https://apps.apple.com/us/app/finpath-wellness/id6443475661",
+    "tintColor": "black",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2022"
+  },
+  {
+    "name": "Foundation 99",
+    "disabled": true,
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/foundation.png",
+    "url_web": "https://foundation99.org/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.f99.finpath",
+    "url_ios": "https://apps.apple.com/us/app/foundation-99/id6443831932",
+    "tintColor": "black",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2022"
+  },
+  {
     "name": "Fetch AI",
+    "disabled": false,
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/fetchai.jpg",
     "url_web": "https://fetch.ai/",
     "url_android": "https://play.google.com/store/apps/details?id=com.fetchai",
@@ -11,6 +34,7 @@
   },
   {
     "name": "Fairmarket Home",
+    "disabled": false,
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/fairmarket.jpg",
     "url_web": "https://fairmarkethome.com/",
     "url_android": "https://play.google.com/store/apps/details?id=com.fairmarkethome",
@@ -21,6 +45,7 @@
   },
   {
     "name": "Scholly Search",
+    "disabled": false,
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/schollysearch.jpg",
     "url_web": "https://myscholly.com/search/",
     "url_android": "https://play.google.com/store/apps/details?id=com.scholly.scholarshipsearch",
@@ -32,6 +57,7 @@
   },
   {
     "name": "Scholly Math",
+    "disabled": false,
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/schollymath.jpg",
     "url_web": "https://myscholly.com/math/",
     "url_android": "https://play.google.com/store/apps/details?id=com.scholly.math",
@@ -42,6 +68,7 @@
   },
   {
     "name": "We Cover",
+    "disabled": false,
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/wecover.jpg",
     "url_web": "https://wecover.co/",
     "url_android": "https://play.google.com/store/apps/details?id=com.paisanoscreando.wecover",
@@ -52,6 +79,7 @@
   },
   {
     "name": "Toyboy Warehouse",
+    "disabled": false,
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/toyboywarehouse.jpg",
     "url_web": "https://toyboywarehouse.com/",
     "url_android": "https://play.google.com/store/apps/details?id=com.toyboywarehouse",

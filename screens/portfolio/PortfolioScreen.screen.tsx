@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   StyleSheet,
   FlatList,
@@ -42,10 +42,15 @@ export default function PortfolioScreen() {
     }
   };
 
+  const listData = useMemo(
+    () => portfolioData.filter((item) => !item.disabled),
+    [portfolioData]
+  );
+
   return (
     <Background>
       <FlatList
-        data={portfolioData as PortfolioItemType[]}
+        data={listData as PortfolioItemType[]}
         keyExtractor={(item) => item.name}
         contentContainerStyle={styles.container}
         numColumns={COLUMN_COUNT}
