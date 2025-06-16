@@ -1,5 +1,16 @@
 [
   {
+    "name": "Copilot IQ",
+    "disabled": false,
+    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/copilotiq.png",
+    "url_web": "https://mycopilotiq.com/",
+    "url_android": "https://play.google.com/store/apps/details?id=com.copilotiq.patientapp",
+    "url_ios": "https://apps.apple.com/us/app/copilotiq/id1665724212",
+    "tintColor": "white",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2025"
+  },
+  {
     "name": "Finpath Wellness",
     "image": "https://portfolio.agustinvazquez.com/assets/portfolio/finpath.png",
     "disabled": true,

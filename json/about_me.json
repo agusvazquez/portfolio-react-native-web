@@ -38,6 +38,10 @@
       "icon": "https://portfolio.agustinvazquez.com/assets/icons/react_native.png"
     },
     {
+      "name": "React JS",
+      "icon": "https://portfolio.agustinvazquez.com/assets/icons/react_native.png"
+    },
+    {
       "name": "Android",
       "icon": "https://portfolio.agustinvazquez.com/assets/icons/android.png"
     },
@@ -89,6 +93,7 @@
     "Graph QL",
     "Apollo Client",
     "Code Push",
+    "Twilio Video",
     "Google Places API",
     "Google Maps",
     "Apple Maps",
