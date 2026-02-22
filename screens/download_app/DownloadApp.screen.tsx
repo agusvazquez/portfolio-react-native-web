@@ -4,11 +4,12 @@ import { ColorTheme, useTheme } from "../../theme/Theme.interface";
 import { Background } from "../../components/ui.component";
 
 const QR_PLAYSTORE =
-  "https://portfolio.agustinvazquez.com/expo/expo_playstore.png";
+  "https://d11qrego1bvg5e.cloudfront.net/expo/expo_playstore.png";
 const QR_APPSTORE =
-  "https://portfolio.agustinvazquez.com/expo/expo_appstore.png";
-const QR_ANDROID = "https://portfolio.agustinvazquez.com/expo/expo_android.png";
-const QR_IOS = "https://portfolio.agustinvazquez.com/expo/expo_ios.png";
+  "https://d11qrego1bvg5e.cloudfront.net/expo/expo_appstore.png";
+const QR_ANDROID =
+  "https://d11qrego1bvg5e.cloudfront.net/expo/expo_android.png";
+const QR_IOS = "https://d11qrego1bvg5e.cloudfront.net/expo/expo_ios.png";
 
 const DownloadApp = () => {
   const theme = useTheme();

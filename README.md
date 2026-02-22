@@ -9,4 +9,4 @@ It supports mobile web with react-native-web and the steps to launch it are the 
 - For iOS, run `yarn ios`
 - For Android, run `yarn android`
 
-This is hosted in https://sample.agustinvazquez.com
+This is hosted in https://d31v5j2okhcoa3.cloudfront.net

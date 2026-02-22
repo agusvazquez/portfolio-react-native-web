@@ -2,7 +2,7 @@
   {
     "name": "Copilot IQ",
     "disabled": false,
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/copilotiq.png",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/copilotiq.png",
     "url_web": "https://mycopilotiq.com/",
     "url_android": "https://play.google.com/store/apps/details?id=com.copilotiq.patientapp",
     "url_ios": "https://apps.apple.com/us/app/copilotiq/id1665724212",
@@ -12,7 +12,7 @@
   },
   {
     "name": "Finpath Wellness",
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/finpath.png",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/finpath.png",
     "disabled": true,
     "url_web": "https://www.finpathwellness.com/",
     "url_android": "https://play.google.com/store/apps/details?id=com.tcg.finpathwellness",
@@ -24,7 +24,7 @@
   {
     "name": "Foundation 99",
     "disabled": true,
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/foundation.png",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/foundation.png",
     "url_web": "https://foundation99.org/",
     "url_android": "https://play.google.com/store/apps/details?id=com.f99.finpath",
     "url_ios": "https://apps.apple.com/us/app/foundation-99/id6443831932",
@@ -35,7 +35,7 @@
   {
     "name": "Fetch AI",
     "disabled": false,
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/fetchai.jpg",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/fetchai.jpg",
     "url_web": "https://fetch.ai/",
     "url_android": "https://play.google.com/store/apps/details?id=com.fetchai",
     "url_ios": "https://apps.apple.com/us/app/fetch-ai/id1613536557",
@@ -46,7 +46,7 @@
   {
     "name": "Fairmarket Home",
     "disabled": false,
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/fairmarket.jpg",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/fairmarket.jpg",
     "url_web": "https://fairmarkethome.com/",
     "url_android": "https://play.google.com/store/apps/details?id=com.fairmarkethome",
     "url_ios": "https://apps.apple.com/us/app/fairmarket-home/id1499657250",
@@ -57,7 +57,7 @@
   {
     "name": "Scholly Search",
     "disabled": false,
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/schollysearch.jpg",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/schollysearch.jpg",
     "url_web": "https://myscholly.com/search/",
     "url_android": "https://play.google.com/store/apps/details?id=com.scholly.scholarshipsearch",
     "url_ios": "https://apps.apple.com/us/app/scholly-college-scholarships/id1048625540",
@@ -69,7 +69,7 @@
   {
     "name": "Scholly Math",
     "disabled": false,
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/schollymath.jpg",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/schollymath.jpg",
     "url_web": "https://myscholly.com/math/",
     "url_android": "https://play.google.com/store/apps/details?id=com.scholly.math",
     "url_ios": "https://apps.apple.com/us/app/scholly-math/id1450673194",
@@ -80,7 +80,7 @@
   {
     "name": "We Cover",
     "disabled": false,
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/wecover.jpg",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/wecover.jpg",
     "url_web": "https://wecover.co/",
     "url_android": "https://play.google.com/store/apps/details?id=com.paisanoscreando.wecover",
     "url_ios": "https://apps.apple.com/us/app/wecover-co/id1459873745",
@@ -91,7 +91,7 @@
   {
     "name": "Toyboy Warehouse",
     "disabled": false,
-    "image": "https://portfolio.agustinvazquez.com/assets/portfolio/toyboywarehouse.jpg",
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/toyboywarehouse.jpg",
     "url_web": "https://toyboywarehouse.com/",
     "url_android": "https://play.google.com/store/apps/details?id=com.toyboywarehouse",
     "url_ios": "https://apps.apple.com/us/app/toyboy-warehouse/id1465752398",

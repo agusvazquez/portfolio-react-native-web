@@ -7,7 +7,7 @@
 import * as Linking from "expo-linking";
 
 export default {
-  prefixes: [Linking.makeUrl("/"), "'https://sample.agustinvazquez.com'"],
+  prefixes: [Linking.makeUrl("/"), "'https://d31v5j2okhcoa3.cloudfront.net'"],
   config: {
     screens: {
       "About Me": {

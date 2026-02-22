@@ -1,5 +1,5 @@
 {
-  "profile_image": "https://portfolio.agustinvazquez.com/assets/profile/profile_picture.jpg",
+  "profile_image": "https://d11qrego1bvg5e.cloudfront.net/assets/profile/profile_picture.jpg",
   "name": "Agustin Vazquez",
   "role": "React Native Developer",
   "email": "aguss.vazquez@gmail.com",
@@ -35,44 +35,44 @@
   "platforms": [
     {
       "name": "React Native",
-      "icon": "https://portfolio.agustinvazquez.com/assets/icons/react_native.png"
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/icons/react_native.png"
     },
     {
       "name": "React JS",
-      "icon": "https://portfolio.agustinvazquez.com/assets/icons/react_native.png"
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/icons/react_native.png"
     },
     {
       "name": "Android",
-      "icon": "https://portfolio.agustinvazquez.com/assets/icons/android.png"
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/icons/android.png"
     },
     {
       "name": "iOS",
-      "icon": "https://portfolio.agustinvazquez.com/assets/icons/ios.png"
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/icons/ios.png"
     },
     {
       "name": "AWS",
-      "icon": "https://portfolio.agustinvazquez.com/assets/icons/aws.png"
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/icons/aws.png"
     }
   ],
   "certifications": [
     {
       "name": "Toptal",
-      "icon": "https://portfolio.agustinvazquez.com/assets/certifications/toptal.png",
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/certifications/toptal.png",
       "url": "https://www.toptal.com/resume/agustin-vazquez"
     },
     {
       "name": "G2i",
-      "icon": "https://portfolio.agustinvazquez.com/assets/certifications/g2i.png",
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/certifications/g2i.png",
       "url": "https://developer.g2i.co/developer/Agustin-Vazquez/db7abeb2-35a1-4645-94ba-c2d323a02f63"
     },
     {
       "name": "Arc",
-      "icon": "https://portfolio.agustinvazquez.com/assets/certifications/arc.png",
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/certifications/arc.png",
       "url": "https://arc.dev/@agustinvazquez209"
     },
     {
       "name": "Brain Trust",
-      "icon": "https://portfolio.agustinvazquez.com/assets/certifications/braintrust.png",
+      "icon": "https://d11qrego1bvg5e.cloudfront.net/assets/certifications/braintrust.png",
       "url": "https://app.usebraintrust.com/talent/327/"
     }
   ],
