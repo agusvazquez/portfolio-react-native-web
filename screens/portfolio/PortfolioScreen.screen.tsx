@@ -44,12 +44,13 @@ export default function PortfolioScreen() {
 
   const listData = useMemo(
     () => portfolioData.filter((item) => !item.disabled),
-    [portfolioData]
+    [portfolioData],
   );
 
   return (
     <Background>
       <FlatList
+        key={COLUMN_COUNT}
         data={listData as PortfolioItemType[]}
         keyExtractor={(item) => item.name}
         contentContainerStyle={styles.container}
