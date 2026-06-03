@@ -3,7 +3,7 @@
   "name": "Agustin Vazquez",
   "role": "React Native Developer",
   "email": "aguss.vazquez@gmail.com",
-  "resumeUrl": "https://www.agustinvazquez.com/CV.pdf",
+  "resumeUrl": "https://dm7prkkvrz3xh.cloudfront.net/CV.pdf",
   "sourceCode": "https://github.com/agusvazquez/portfolio-react-native-web",
   "social": [
     {
@@ -20,11 +20,6 @@
       "name": "Linkedin",
       "icon": "logo-linkedin",
       "url": "https://www.linkedin.com/in/agustinvazquez"
-    },
-    {
-      "name": "Twitter",
-      "icon": "logo-twitter",
-      "url": "https://twitter.com/agusssvazquez"
     },
     {
       "name": "Facebook",
