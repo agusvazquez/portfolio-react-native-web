@@ -1,5 +1,10 @@
 [
   {
+    "time": "2026",
+    "title": "Bilt Rewards",
+    "description": "- Added Google Analytics to the project to ensure proper user behavior tracking.\n- Created a new merchant portal to CURD offers and journeys into the system.\n- Learned how AI works and widely used Cursor and Claude in this project."
+  },
+  {
     "time": "2025",
     "title": "Copilot IQ",
     "description": "- Built a cross-platform app (Android, iOS, web) with React Native for Web, optimized for all screen sizes.\n- Integrated Twilio Voice/Video, push notifications, CodePush, and Google Analytics.\n- Contributed to the internal React.js dashboard used by Copilot IQ's clinical team."

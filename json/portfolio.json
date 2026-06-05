@@ -1,5 +1,16 @@
 [
   {
+    "name": "Bilt Rewards",
+    "disabled": false,
+    "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/bilt.png",
+    "url_web": "https://www.bilt.com/app",
+    "url_android": "https://play.google.com/store/apps/details?id=com.biltrewards.bilt",
+    "url_ios": "https://apps.apple.com/us/app/bilt-rewards/id1565576987",
+    "tintColor": "white",
+    "platforms": ["react_native", "ios", "android"],
+    "lastWork": "2026"
+  },
+  {
     "name": "Copilot IQ",
     "disabled": false,
     "image": "https://d11qrego1bvg5e.cloudfront.net/assets/portfolio/copilotiq.png",
@@ -7,7 +18,7 @@
     "url_android": "https://play.google.com/store/apps/details?id=com.copilotiq.patientapp",
     "url_ios": "https://apps.apple.com/us/app/copilotiq/id1665724212",
     "tintColor": "white",
-    "platforms": ["react_native", "ios", "android"],
+    "platforms": ["react_native", "ios", "android", "web"],
     "lastWork": "2025"
   },
   {
