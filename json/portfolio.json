@@ -17,7 +17,7 @@
     "url_web": "https://mycopilotiq.com/",
     "url_android": "https://play.google.com/store/apps/details?id=com.copilotiq.patientapp",
     "url_ios": "https://apps.apple.com/us/app/copilotiq/id1665724212",
-    "tintColor": "white",
+    "tintColor": "black",
     "platforms": ["react_native", "ios", "android", "web"],
     "lastWork": "2025"
   },
